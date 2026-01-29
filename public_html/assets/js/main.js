@@ -63,6 +63,39 @@ if (!prefersReducedMotion) {
   });
 }
 
+const heroBrain = document.querySelector("#heroBrain");
+const heroMedia = heroBrain ? heroBrain.closest(".hero-media") : null;
+const supportsHover = window.matchMedia("(hover: hover)").matches;
+
+if (heroBrain && heroMedia && supportsHover && !prefersReducedMotion) {
+  let rafId = null;
+
+  const updateTilt = (event) => {
+    const rect = heroMedia.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    const rotateX = (-y * 8).toFixed(2);
+    const rotateY = (x * 8).toFixed(2);
+
+    if (rafId) {
+      cancelAnimationFrame(rafId);
+    }
+
+    rafId = requestAnimationFrame(() => {
+      heroBrain.style.setProperty("--tilt-x", `${rotateX}deg`);
+      heroBrain.style.setProperty("--tilt-y", `${rotateY}deg`);
+      heroBrain.style.setProperty("--tilt-scale", "1.03");
+    });
+  };
+
+  heroMedia.addEventListener("mousemove", updateTilt);
+  heroMedia.addEventListener("mouseleave", () => {
+    heroBrain.style.setProperty("--tilt-x", "0deg");
+    heroBrain.style.setProperty("--tilt-y", "0deg");
+    heroBrain.style.setProperty("--tilt-scale", "1");
+  });
+}
+
 const testimonialSlides = document.querySelectorAll(".testimonial-slide");
 let testimonialIndex = 0;
 

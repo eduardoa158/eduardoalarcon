@@ -1,5 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
-  <rect width="100%" height="100%" fill="#0e0e12"/>
-  <rect x="20" y="20" width="760" height="560" rx="24" fill="#070709" stroke="#ff2d2d" stroke-width="2"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#ffffff" font-size="28" font-family="Arial, sans-serif">Imagen pendiente de descarga</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ff2d2d" stop-opacity="0.7" />
+      <stop offset="60%" stop-color="#ff2d2d" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#070709" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="brain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#ff2d2d" stop-opacity="0.8" />
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" result="blur" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0.2 0 0 0  0 0 0.2 0 0  0 0 0 0.8 0" />
+      <feBlend in="SourceGraphic" in2="blur" mode="screen" />
+    </filter>
+  </defs>
+  <rect width="900" height="900" fill="#070709" />
+  <circle cx="450" cy="360" r="320" fill="url(#glow)" />
+  <g filter="url(#softGlow)">
+    <path
+      d="M260 520c-55-30-86-86-86-150 0-96 69-175 164-196 52-11 99-2 140 20 36-35 86-57 142-57 112 0 203 91 203 203 0 86-54 160-130 191-18 86-93 150-183 150-68 0-129-36-163-91-39 18-90 17-127-10-39-28-60-74-60-122 0-43 17-83 44-112z"
+      fill="url(#brain)"
+      stroke="#ff2d2d"
+      stroke-width="8"
+      opacity="0.95"
+    />
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="4">
+    <path d="M320 390c40-60 130-65 170-5" />
+    <path d="M330 470c30-30 90-40 140-10" />
+    <path d="M480 420c40-40 110-45 150-10" />
+    <path d="M400 560c30 20 70 25 105 10" />
+  </g>
 </svg>

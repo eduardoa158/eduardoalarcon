@@ -143,6 +143,43 @@ a {
   align-items: center;
 }
 
+.hero-media {
+  position: relative;
+  padding: 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 45, 45, 0.5);
+  background: rgba(7, 7, 9, 0.6);
+  box-shadow: 0 0 35px rgba(255, 45, 45, 0.25);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.hero-media-glow {
+  position: absolute;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(255, 45, 45, 0.35), transparent 65%);
+  opacity: 0.8;
+  animation: heroGlow 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+.hero-media-img {
+  position: relative;
+  z-index: 1;
+  width: min(420px, 90%);
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(255, 45, 45, 0.35);
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --tilt-scale: 1;
+  animation: heroFloat 6s ease-in-out infinite;
+  transition: transform 0.2s ease;
+}
+
 .hero h1 {
   font-size: clamp(2.4rem, 4vw, 3.6rem);
   line-height: 1.1;
@@ -203,6 +240,30 @@ a {
   to {
     transform: scale(4);
     opacity: 0;
+  }
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0.2deg) rotateX(var(--tilt-x)) rotateY(var(--tilt-y))
+      scale(var(--tilt-scale));
+  }
+  50% {
+    transform: translateY(-10px) rotate(-0.4deg) rotateX(var(--tilt-x)) rotateY(var(--tilt-y))
+      scale(var(--tilt-scale));
+  }
+}
+
+@keyframes heroGlow {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -530,6 +591,12 @@ a {
   }
 }
 
+@media (hover: none) {
+  .hero-media-img {
+    transform: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -538,7 +605,9 @@ a {
   .reveal,
   .icon-badge,
   .button,
-  .tilt {
+  .tilt,
+  .hero-media-img,
+  .hero-media-glow {
     transition: none !important;
     animation: none !important;
   }
