@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WaCRM | Asistente IA para WhatsApp — powered by Digital Vision Latam</title>
+  <meta name="description" content="Diagnóstico gratuito por WhatsApp. Si tu negocio califica, activas 7 días gratis. Luego $47,77/mes. Solo WhatsApp (sin CRM ni automatizaciones). Soporte 24/7 y ajustes de guion incluidos." />
+  <meta name="keywords" content="asistente IA WhatsApp, bot WhatsApp, responder 24/7, atención por WhatsApp, leads WhatsApp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #060606;
+      --bg-soft: #101010;
+      --text: #f7f7f7;
+      --muted: #a8a8a8;
+      --red: #ff2d2d;
+      --yellow: #ffd400;
+      --line: #232323;
+      --green: #22d16b;
+      --warn: #ff9a1f;
+      --radius: 16px;
+      --shadow: 0 0 24px rgba(255,45,45,.25);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: radial-gradient(circle at top right, #1b0606 0%, #080808 35%, #060606 100%); color: var(--text); }
+    body { font-family: 'Rajdhani', system-ui, -apple-system, Segoe UI, sans-serif; line-height: 1.5; }
+
+    .container { width: min(1140px, 92%); margin: 0 auto; }
+    .section { padding: 5rem 0; border-bottom: 1px solid var(--line); }
+    .section h2 { font-family: 'Orbitron', sans-serif; font-size: clamp(1.6rem, 3vw, 2.4rem); margin: 0 0 1rem; letter-spacing: .5px; }
+    .eyebrow { color: var(--yellow); text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; font-size: .88rem; }
+
+    .brand-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      background: rgba(6,6,6,.8);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 68px;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 800;
+      letter-spacing: .4px;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .logo span { color: var(--yellow); }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      padding: .95rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid #ff5f5f;
+      background: linear-gradient(120deg, var(--red), #ff4f00);
+      box-shadow: var(--shadow);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: transform .2s ease, box-shadow .2s ease;
+      text-align: center;
+    }
+
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 0 26px rgba(255,45,45,.4); }
+
+    .microtrust {
+      margin-top: .75rem;
+      color: var(--muted);
+      font-size: .95rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem 1.1rem;
+    }
+
+    .hero { padding: 5.3rem 0 4.6rem; }
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.08;
+      margin: .5rem 0 1rem;
+      max-width: 15ch;
+    }
+
+    .headline-options {
+      background: linear-gradient(180deg, #111, #0b0b0b);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem;
+      margin: 1rem 0 1.2rem;
+    }
+
+    .headline-options ol { margin: .5rem 0 0 1.2rem; padding: 0; color: var(--muted); }
+    .headline-options li strong { color: var(--yellow); }
+
+    .hero p { max-width: 68ch; color: #e9e9e9; font-size: 1.15rem; margin-bottom: 1.2rem; }
+    .quick-bullets { display: grid; gap: .55rem; margin: 1rem 0 1.4rem; padding: 0; list-style: none; }
+    .quick-bullets li::before { content: '✦'; color: var(--yellow); margin-right: .6rem; }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1rem; }
+
+    .card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(20,20,20,.95), rgba(10,10,10,.95));
+      border-radius: var(--radius);
+      padding: 1.1rem;
+    }
+
+    .card h3 { margin: 0 0 .55rem; font-family: 'Orbitron', sans-serif; font-size: 1.03rem; }
+    .card p, .card li { color: #d7d7d7; }
+
+    .warning {
+      border: 1px solid #6b4309;
+      background: linear-gradient(180deg, rgba(255,154,31,.15), rgba(255,154,31,.08));
+      border-radius: var(--radius);
+      padding: 1rem;
+      color: #ffd7a6;
+    }
+
+    .badge {
+      display: inline-block;
+      border: 1px solid #2f2f2f;
+      background: #101010;
+      color: #fff;
+      border-radius: 999px;
+      padding: .3rem .75rem;
+      font-size: .85rem;
+      font-weight: 700;
+      margin-bottom: .8rem;
+    }
+
+    .yesno { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+    .yesno ul { margin: .4rem 0 0; padding-left: 1rem; }
+    .yesno .yes { border-color: rgba(34,209,107,.35); }
+    .yesno .no { border-color: rgba(255,45,45,.4); }
+
+    .step { position: relative; padding-left: 2.6rem; }
+    .step::before {
+      content: attr(data-step);
+      position: absolute;
+      left: .7rem;
+      top: .8rem;
+      color: var(--yellow);
+      font-family: 'Orbitron', sans-serif;
+      font-size: .9rem;
+    }
+
+    .price-highlight {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--yellow);
+    }
+
+    .faq details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: .9rem 1rem;
+      background: #0d0d0d;
+    }
+
+    .faq details + details { margin-top: .7rem; }
+    .faq summary { cursor: pointer; font-weight: 700; }
+    .faq p { margin: .55rem 0 0; color: #d0d0d0; }
+
+    footer { padding: 2rem 0 7rem; color: var(--muted); font-size: .95rem; }
+    footer a { color: #fff; }
+
+    .sticky-mobile {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 140;
+      padding: .7rem .8rem calc(.8rem + env(safe-area-inset-bottom));
+      background: linear-gradient(180deg, rgba(6,6,6,.1), rgba(6,6,6,.95));
+      border-top: 1px solid var(--line);
+      display: none;
+    }
+
+    .sticky-mobile .cta-btn { width: 100%; }
+
+    @media (max-width: 980px) {
+      .grid-4 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .grid-3 { grid-template-columns: 1fr 1fr; }
+      .yesno, .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      .hero { padding-top: 4rem; }
+      .sticky-mobile { display: block; }
+      .desktop-only { display: none; }
+      footer { padding-bottom: 6.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="brand-bar">
+    <div class="container brand-inner">
+      <div class="logo">WaCRM <span>— powered by Digital Vision Latam</span></div>
+      <a class="cta-btn desktop-only" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20solicitar%20el%20diagn%C3%B3stico%20gratuito%20y%20activar%20la%20prueba%20de%207%20d%C3%ADas%20de%20WaCRM%20(powered%20by%20Digital%20Vision%20Latam).%20Mi%20negocio%20es%3A%20_____%20y%20atiendo%20por%3A%20_____%20" target="_blank" rel="noopener">Solicitar diagnóstico por WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Diagnóstico gratuito y exclusivo</p>
+        <h1>Tu WhatsApp atendido 24/7 con IA: si tu negocio califica, activas 7 días gratis.</h1>
+        <div class="headline-options">
+          <strong>Opciones de headline creadas:</strong>
+          <ol>
+            <li><strong>Principal elegida:</strong> Tu WhatsApp atendido 24/7 con IA: si tu negocio califica, activas 7 días gratis.</li>
+            <li>Responde, filtra y ordena tu WhatsApp 24/7: diagnóstico gratuito y activación por selección.</li>
+            <li>No pierdas más leads en WhatsApp: evaluamos tu negocio y, si califica, pruebas WaCRM 7 días gratis.</li>
+          </ol>
+        </div>
+        <p>WaCRM (solo WhatsApp) responde, organiza contactos y te ayuda a no perder oportunidades. Diagnóstico gratuito por WhatsApp.</p>
+        <ul class="quick-bullets">
+          <li>Soporte 24/7.</li>
+          <li>Ajustes de guion incluidos.</li>
+          <li>Luego $47,77/mes si continúas.</li>
+        </ul>
+        <a class="cta-btn" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20solicitar%20el%20diagn%C3%B3stico%20gratuito%20y%20activar%20la%20prueba%20de%207%20d%C3%ADas%20de%20WaCRM%20(powered%20by%20Digital%20Vision%20Latam).%20Mi%20negocio%20es%3A%20_____%20y%20atiendo%20por%3A%20_____%20" target="_blank" rel="noopener">Solicitar diagnóstico por WhatsApp</a>
+        <p class="microtrust">Diagnóstico gratuito · Soporte 24/7 · Sin compra en la web · Cupos limitados por selección</p>
+        <p style="margin-top:.5rem;color:var(--muted)">No cobramos en la web. Primero evaluamos tu caso.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>¿Para quién es WaCRM?</h2>
+        <div class="grid-3">
+          <article class="card"><h3>Médicos y clínicas</h3><p>Agenda citas y responde preguntas frecuentes sin dejar chats en visto.</p></article>
+          <article class="card"><h3>Asesores y vendedores</h3><p>Agenda demostraciones y filtra interesados con conversaciones más claras.</p></article>
+          <article class="card"><h3>Inmobiliarias</h3><p>Responde disponibilidad, capta leads y evita que se enfríen.</p></article>
+          <article class="card"><h3>Restaurantes</h3><p>Gestiona reservas, horarios y menú por WhatsApp con mayor velocidad.</p></article>
+          <article class="card"><h3>Educación y academias</h3><p>Resuelve dudas de inscripción y mantén atención constante.</p></article>
+          <article class="card"><h3>E-commerce y servicios</h3><p>Da soporte y responde dudas de compra sin depender de un solo horario.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>El problema no es tener WhatsApp, es no responder a tiempo</h2>
+        <ul class="quick-bullets">
+          <li>Mensajes que se contestan tarde y leads que se enfrían.</li>
+          <li>Tu equipo se satura con preguntas repetidas todos los días.</li>
+          <li>Seguimientos incompletos por exceso de chats abiertos.</li>
+          <li>Pérdida de ventas por falta de respuesta fuera de horario.</li>
+          <li>Estrés operativo y menos foco en tareas que sí hacen crecer el negocio.</li>
+        </ul>
+        <p class="price-highlight">Si tu WhatsApp se queda sin respuesta, tus ventas se van con la competencia.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Qué es WaCRM (y qué no es)</h2>
+        <p>WaCRM es un <strong>Asistente Inteligente de IA conectado SOLO a WhatsApp</strong>. Aclaremos algo importante: <strong>WaCRM NO es un CRM</strong>, aunque se llame WaCRM.</p>
+        <div class="yesno">
+          <article class="card yes">
+            <h3>Lo que SÍ incluye</h3>
+            <ul>
+              <li>Conexión con WhatsApp.</li>
+              <li>Respuestas con IA.</li>
+              <li>Extracción de contactos.</li>
+              <li>Mensajes masivos.</li>
+              <li>Soporte 24/7.</li>
+              <li>Ajustes de guion y actualizaciones de oferta.</li>
+            </ul>
+          </article>
+          <article class="card no">
+            <h3>Lo que NO incluye</h3>
+            <ul>
+              <li>Integración con CRM.</li>
+              <li>Automatizaciones incluidas por defecto.</li>
+              <li>Integración con Instagram/Facebook u otras RRSS.</li>
+              <li>Asistentes de voz en este plan.</li>
+              <li>Gestión automática de agenda y seguimiento.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Beneficios diseñados para conversión real</h2>
+        <div class="grid-4">
+          <article class="card"><span class="badge">Velocidad</span><p>Respuestas más rápidas y constantes en WhatsApp, incluso fuera del horario comercial.</p></article>
+          <article class="card"><span class="badge">Consistencia</span><p>Menos improvisación: mensajes más claros, ordenados y alineados a tu oferta.</p></article>
+          <article class="card"><span class="badge">Menos fuga de leads</span><p>Cada conversación atendida reduce oportunidades perdidas por tardanza.</p></article>
+          <article class="card"><span class="badge">Campañas</span><p>Actualiza guiones por promociones, fechas especiales o cambios de enfoque comercial.</p></article>
+          <article class="card"><span class="badge">Escalabilidad</span><p>Soporta más volumen de chats sin aumentar caos operativo en tu equipo.</p></article>
+          <article class="card"><span class="badge">Control</span><p>Tú decides la agenda y seguimiento manual según tu proceso interno.</p></article>
+          <article class="card"><span class="badge">Soporte 24/7</span><p>Correcciones, ajustes y actualizaciones incluidas durante tu servicio activo.</p></article>
+          <article class="card"><span class="badge">Sello</span><p><strong>WaCRM — powered by Digital Vision Latam.</strong></p></article>
+        </div>
+        <div style="margin-top:1.5rem">
+          <a class="cta-btn" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20solicitar%20el%20diagn%C3%B3stico%20gratuito%20y%20activar%20la%20prueba%20de%207%20d%C3%ADas%20de%20WaCRM%20(powered%20by%20Digital%20Vision%20Latam).%20Mi%20negocio%20es%3A%20_____%20y%20atiendo%20por%3A%20_____%20" target="_blank" rel="noopener">Solicitar diagnóstico por WhatsApp</a>
+          <p class="microtrust">Diagnóstico gratuito · Soporte 24/7 · Sin compra en la web · Cupos limitados por selección</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Cómo funciona</h2>
+        <div class="grid-3">
+          <article class="card step" data-step="01"><h3>Solicitas diagnóstico</h3><p>Haces click en WhatsApp y nos compartes tu caso.</p></article>
+          <article class="card step" data-step="02"><h3>Evaluamos tu negocio</h3><p>Por alta demanda, seleccionamos negocios donde WaCRM realmente generará beneficios.</p></article>
+          <article class="card step" data-step="03"><h3>Configuración a fondo</h3><p>Definimos guion, tono y enfoque comercial de tu asistente.</p></article>
+          <article class="card step" data-step="04"><h3>Activación de prueba</h3><p>Si calificas, activamos 7 días gratis (no se activa automáticamente).</p></article>
+          <article class="card step" data-step="05"><h3>Continuidad opcional</h3><p>Si decides continuar, el servicio queda en $47,77/mes.</p></article>
+          <article class="card"><h3>Métodos de pago</h3><p>Tarjeta, transferencias a bancos locales de Paraguay y Ecuador, giros internacionales y PayPal.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Un equipo 24/7 cuesta muchísimo más que WaCRM</h2>
+        <p>Para cubrir 24/7 necesitas al menos 3 turnos (3 personas) + supervisión + entrenamientos + rotación. Los costos varían por país, pero la lógica operativa es la misma.</p>
+        <div class="grid-3">
+          <article class="card"><h3>Escenario clínica</h3><p><strong>Responder + agendar todo el día</strong> suele requerir 2–3 personas para horarios extendidos o 24/7.</p></article>
+          <article class="card"><h3>Escenario ventas</h3><p><strong>Seguimiento y demostraciones</strong>: 1 vendedor + 1 asistente no cubre 24/7; los leads nocturnos se enfrían.</p></article>
+          <article class="card"><h3>Escenario servicios</h3><p><strong>Consultas repetitivas + cotizaciones</strong>: el costo del tiempo perdido suele superar $47,77/mes.</p></article>
+        </div>
+        <p class="price-highlight">WaCRM: $47,77/mes (~$1,60/día aprox.) + soporte 24/7 + ajustes incluidos.</p>
+        <a class="cta-btn" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20solicitar%20el%20diagn%C3%B3stico%20gratuito%20y%20activar%20la%20prueba%20de%207%20d%C3%ADas%20de%20WaCRM%20(powered%20by%20Digital%20Vision%20Latam).%20Mi%20negocio%20es%3A%20_____%20y%20atiendo%20por%3A%20_____%20" target="_blank" rel="noopener">Solicitar diagnóstico por WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Mensajes masivos y extracción de contactos: con estrategia responsable</h2>
+        <p>WaCRM te permite ejecutar campañas por WhatsApp y organizar contactos para mejorar seguimiento comercial.</p>
+        <div class="warning">
+          <strong>WARNING:</strong> El envío masivo mal utilizado puede provocar bloqueos/baneos. Te damos una guía de buenas prácticas para reducir riesgos, pero depende del uso y de las políticas de WhatsApp.
+        </div>
+        <ul class="quick-bullets" style="margin-top:1rem">
+          <li>Trabajar con opt-in real (contactos que autorizaron recibir mensajes).</li>
+          <li>Segmentar listas según interés y etapa de compra.</li>
+          <li>Mantener frecuencia moderada y evitar saturación.</li>
+          <li>Enviar contenido útil y relevante, no spam.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Planes y opciones</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Prueba 7 días gratis (solo si tu negocio califica)</h3>
+            <p class="price-highlight">Luego: $47,77/mes</p>
+            <p>Incluye WhatsApp + IA + extracción + masivos + soporte 24/7 + ajustes de guion/oferta.</p>
+            <p>El pago mensual se realiza <strong>solo si decides continuar</strong> al finalizar la prueba.</p>
+          </article>
+          <article class="card">
+            <h3>Add-on opcional para clientes activos</h3>
+            <p class="price-highlight">Automatización Google Calendar / registro de ventas: +$13,33/mes</p>
+            <p>También puedes llevar control en Excel con dashboard interactivo como plus.</p>
+          </article>
+        </div>
+        <p style="margin-top:1rem;color:var(--muted)">Aclaración clave: WaCRM NO incluye CRM ni automatizaciones por defecto.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Resultados que buscamos (plantillas para reemplazar)</h2>
+        <div class="grid-2">
+          <article class="card"><h3>Plantilla – reemplazar · Dra. ___ (Clínica)</h3><p>“Ahora responden incluso fuera de horario y ya no perdemos tantas citas por demora.”</p></article>
+          <article class="card"><h3>Plantilla – reemplazar · ___ (Inmobiliaria)</h3><p>“Filtramos interesados y ordenamos consultas; el equipo trabaja con más foco.”</p></article>
+          <article class="card"><h3>Plantilla – reemplazar · ___ (Ventas)</h3><p>“Agendamos más llamadas sin perseguir mensajes sueltos todo el día.”</p></article>
+          <article class="card"><h3>Plantilla – reemplazar · ___ (Servicios)</h3><p>“Menos tiempo operativo en WhatsApp, más tiempo cerrando oportunidades.”</p></article>
+        </div>
+        <div style="margin-top:1.5rem">
+          <a class="cta-btn" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20solicitar%20el%20diagn%C3%B3stico%20gratuito%20y%20activar%20la%20prueba%20de%207%20d%C3%ADas%20de%20WaCRM%20(powered%20by%20Digital%20Vision%20Latam).%20Mi%20negocio%20es%3A%20_____%20y%20atiendo%20por%3A%20_____%20" target="_blank" rel="noopener">Solicitar diagnóstico por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container">
+        <h2>Preguntas frecuentes</h2>
+        <details><summary>¿WaCRM es un CRM?</summary><p>No. WaCRM es un asistente de IA conectado solo a WhatsApp.</p></details>
+        <details><summary>¿Incluye automatizaciones?</summary><p>No por defecto. Existe un add-on opcional para clientes activos.</p></details>
+        <details><summary>¿Funciona en Instagram/Facebook o solo WhatsApp?</summary><p>En este plan, solo WhatsApp.</p></details>
+        <details><summary>¿Cómo se activa la prueba gratis de 7 días?</summary><p>Primero hacemos diagnóstico y evaluación. Si tu negocio califica, la activamos.</p></details>
+        <details><summary>¿Qué pasa si mi negocio no califica?</summary><p>No se activa la prueba. Te lo informamos con transparencia según tu caso.</p></details>
+        <details><summary>¿Qué incluye el soporte 24/7?</summary><p>Correcciones, ajustes y actualizaciones de guion/oferta durante el servicio activo.</p></details>
+        <details><summary>¿Puedo pedir cambios de guion por campañas o fechas especiales?</summary><p>Sí, están contemplados dentro del soporte incluido.</p></details>
+        <details><summary>¿Cuándo y cómo se cobra $47,77/mes?</summary><p>Solo si decides continuar después de la prueba. Se coordina en la llamada.</p></details>
+        <details><summary>¿Qué métodos de pago aceptan (Paraguay/Ecuador/PayPal)?</summary><p>Tarjeta, transferencias bancarias locales en Paraguay y Ecuador, giros internacionales y PayPal.</p></details>
+        <details><summary>¿Puedo cancelar después de la prueba?</summary><p>Sí. Si no continúas, no se ejecuta cobro mensual.</p></details>
+        <details><summary>¿Qué necesito para empezar?</summary><p>Tener WhatsApp operativo, oferta clara y disposición para definir guion y enfoque.</p></details>
+        <details><summary>¿Cuánto tarda la configuración?</summary><p>Depende del caso, pero se define en la llamada de diagnóstico.</p></details>
+        <details><summary>¿El envío masivo puede bloquear mi WhatsApp?</summary><p>Sí existe riesgo si se usa mal. Por eso entregamos guía de buenas prácticas para reducir riesgos; no prometemos cero bloqueos.</p></details>
+        <details><summary>¿Qué incluye el add-on de +$13,33/mes?</summary><p>Automatización para registro de ventas o agendamiento en Google Calendar, con opción de control en Excel dashboard.</p></details>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Solicita tu diagnóstico gratuito (y si calificas, activas 7 días gratis)</h2>
+        <p>Sin compra en la web. Primero evaluamos tu caso y configuramos el asistente a tu medida.</p>
+        <a class="cta-btn" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20solicitar%20el%20diagn%C3%B3stico%20gratuito%20y%20activar%20la%20prueba%20de%207%20d%C3%ADas%20de%20WaCRM%20(powered%20by%20Digital%20Vision%20Latam).%20Mi%20negocio%20es%3A%20_____%20y%20atiendo%20por%3A%20_____%20" target="_blank" rel="noopener">Solicitar diagnóstico por WhatsApp</a>
+        <p class="microtrust">Cupos limitados por selección y soporte 24/7.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Digital Vision Latam</strong> · Paraguay / Ecuador · Atención para toda Latinoamérica.</p>
+      <p>WaCRM — powered by Digital Vision Latam.</p>
+      <p>WhatsApp es una marca registrada de sus respectivos propietarios. Digital Vision Latam no está afiliado a Meta.</p>
+      <p><a href="#">Privacidad</a> · <a href="#">Términos</a> · <a href="https://wa.me/593959920299" target="_blank" rel="noopener">Contacto</a></p>
+    </div>
+  </footer>
+
+  <div class="sticky-mobile">
+    <a class="cta-btn" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20solicitar%20el%20diagn%C3%B3stico%20gratuito%20y%20activar%20la%20prueba%20de%207%20d%C3%ADas%20de%20WaCRM%20(powered%20by%20Digital%20Vision%20Latam).%20Mi%20negocio%20es%3A%20_____%20y%20atiendo%20por%3A%20_____%20" target="_blank" rel="noopener">WhatsApp: Solicitar diagnóstico</a>
+  </div>
+</body>
+</html>
