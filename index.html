@@ -141,6 +141,40 @@
 
     .scenario-media { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 14px; border: 1px solid var(--line); margin-bottom: .65rem; }
 
+    .wacrm-audience__grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 1rem;
+      align-items: stretch;
+    }
+    .wacrm-audience__card { padding: 1rem; }
+    .wacrm-audience__image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      display: block;
+      margin-bottom: .7rem;
+    }
+    .wacrm-audience__tag {
+      display: inline-block;
+      font-size: .76rem;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+      color: #1d1700;
+      background: var(--yellow);
+      border-radius: 999px;
+      padding: .2rem .58rem;
+      font-weight: 700;
+      margin-bottom: .55rem;
+    }
+    .wacrm-audience__note {
+      margin-top: .95rem;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
     .warning {
       border: 1px solid rgba(255,195,0,.45);
       background: linear-gradient(180deg, rgba(255,195,0,.14), rgba(255,195,0,.05));
@@ -199,6 +233,7 @@
     @media (max-width: 1020px) {
       .hero-grid, .grid-2, .grid-3 { grid-template-columns: 1fr; }
       .grid-4, .callouts { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .wacrm-audience__grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
       h1 { max-width: 22ch; }
     }
     @media (max-width: 760px) {
@@ -208,6 +243,7 @@
       .sticky-mobile { display: block; }
       footer { padding-bottom: 7rem; }
       .section { padding: clamp(48px, 9vw, 64px) 0; }
+      .wacrm-audience__grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -243,37 +279,48 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section wacrm-audience">
       <div class="container fade-in">
         <h2>¿Para quién es WaCRM?</h2>
-        <div class="tab-buttons" role="tablist">
-          <button class="tab-btn active" data-tab="medicos">Médicos</button>
-          <button class="tab-btn" data-tab="ventas">Ventas</button>
-          <button class="tab-btn" data-tab="inmobiliaria">Inmobiliaria</button>
-          <button class="tab-btn" data-tab="servicios">Servicios</button>
-          <button class="tab-btn" data-tab="ecommerce">E-commerce</button>
+        <div class="wacrm-audience__grid">
+          <article class="card glass wacrm-audience__card">
+            <img class="wacrm-audience__image" loading="lazy" src="https://picsum.photos/seed/wacrm-med/1200/700" alt="Equipo médico en clínica atendiendo consultas" />
+            <span class="wacrm-audience__tag">Ideal para alto volumen</span>
+            <h3>Médicos y clínicas</h3>
+            <p>Agenda citas y responde preguntas frecuentes sin dejar chats en visto.</p>
+          </article>
+          <article class="card glass wacrm-audience__card">
+            <img class="wacrm-audience__image" loading="lazy" src="https://picsum.photos/seed/wacrm-ventas/1200/700" alt="Equipo comercial gestionando prospectos" />
+            <span class="wacrm-audience__tag">Ideal para alto volumen</span>
+            <h3>Ventas</h3>
+            <p>Califica interesados, responde objeciones y agenda demostraciones 24/7.</p>
+          </article>
+          <article class="card glass wacrm-audience__card">
+            <img class="wacrm-audience__image" loading="lazy" src="https://picsum.photos/seed/wacrm-inmo/1200/700" alt="Asesor inmobiliario atendiendo disponibilidad" />
+            <span class="wacrm-audience__tag">Ideal para alto volumen</span>
+            <h3>Inmobiliarias</h3>
+            <p>Atiende disponibilidad, filtra interesados y coordina visitas más rápido.</p>
+          </article>
+          <article class="card glass wacrm-audience__card">
+            <img class="wacrm-audience__image" loading="lazy" src="https://picsum.photos/seed/wacrm-serv/1200/700" alt="Profesionales de servicios respondiendo solicitudes" />
+            <span class="wacrm-audience__tag">Ideal para alto volumen</span>
+            <h3>Servicios (abogados/consultores/agencias/coach)</h3>
+            <p>Recibe solicitudes, responde dudas y guía al cliente al siguiente paso.</p>
+          </article>
+          <article class="card glass wacrm-audience__card">
+            <img class="wacrm-audience__image" loading="lazy" src="https://picsum.photos/seed/wacrm-ecom/1200/700" alt="Panel de e-commerce con consultas de clientes" />
+            <span class="wacrm-audience__tag">Ideal para alto volumen</span>
+            <h3>E-commerce</h3>
+            <p>Resuelve stock, envíos y pagos para convertir preguntas en compras.</p>
+          </article>
+          <article class="card glass wacrm-audience__card">
+            <img class="wacrm-audience__image" loading="lazy" src="https://picsum.photos/seed/wacrm-edu/1200/700" alt="Institución educativa resolviendo dudas de inscripción" />
+            <span class="wacrm-audience__tag">Ideal para alto volumen</span>
+            <h3>Educación y academias</h3>
+            <p>Resuelve dudas de inscripción y mantén atención constante.</p>
+          </article>
         </div>
-
-        <div class="tab-pane active grid-2" data-pane="medicos">
-          <article class="card glass"><img class="scenario-media" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80" alt="Profesional médico atendiendo consultas y citas por WhatsApp" /><h3>Médicos y clínicas</h3><p>Agenda citas y responde preguntas frecuentes sin dejar chats en visto.</p></article>
-          <article class="card glass"><h3>Educación y academias</h3><p>Resuelve dudas de inscripción y mantén atención constante.</p></article>
-        </div>
-        <div class="tab-pane grid-2" data-pane="ventas">
-          <article class="card glass"><img class="scenario-media" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80" alt="Asesor de ventas agendando demostraciones y filtrando interesados" /><h3>Asesores y vendedores</h3><p>Agenda demostraciones y filtra interesados con conversaciones más claras.</p></article>
-          <article class="card glass"><h3>Restaurantes</h3><p>Gestiona reservas, horarios y menú por WhatsApp con mayor velocidad.</p></article>
-        </div>
-        <div class="tab-pane grid-2" data-pane="inmobiliaria">
-          <article class="card glass"><img class="scenario-media" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80" alt="Agente inmobiliario respondiendo disponibilidad y captando leads" /><h3>Inmobiliarias</h3><p>Responde disponibilidad, capta leads y evita que se enfríen.</p></article>
-          <article class="card glass"><h3>E-commerce y servicios</h3><p>Da soporte y responde dudas de compra sin depender de un solo horario.</p></article>
-        </div>
-        <div class="tab-pane grid-2" data-pane="servicios">
-          <article class="card glass"><img class="scenario-media" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80" alt="Equipo de servicios atendiendo consultas repetitivas y cotizaciones" /><h3>E-commerce y servicios</h3><p>Da soporte y responde dudas de compra sin depender de un solo horario.</p></article>
-          <article class="card glass"><h3>Asesores y vendedores</h3><p>Agenda demostraciones y filtra interesados con conversaciones más claras.</p></article>
-        </div>
-        <div class="tab-pane grid-2" data-pane="ecommerce">
-          <article class="card glass"><img class="scenario-media" src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?auto=format&fit=crop&w=1200&q=80" alt="Panel de comercio electrónico con soporte por WhatsApp" /><h3>E-commerce y servicios</h3><p>Da soporte y responde dudas de compra sin depender de un solo horario.</p></article>
-          <article class="card glass"><h3>Médicos y clínicas</h3><p>Agenda citas y responde preguntas frecuentes sin dejar chats en visto.</p></article>
-        </div>
+        <p class="wacrm-audience__note">WaCRM funciona solo en WhatsApp (sin CRM ni automatizaciones incluidas).</p>
       </div>
     </section>
 
@@ -494,15 +541,6 @@
       const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
       progress.style.width = scrolled + '%';
     });
-
-    const tabs = document.querySelectorAll('.tab-btn');
-    const panes = document.querySelectorAll('.tab-pane');
-    tabs.forEach(btn => btn.addEventListener('click', () => {
-      tabs.forEach(b => b.classList.remove('active'));
-      panes.forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelector(`[data-pane="${btn.dataset.tab}"]`).classList.add('active');
-    }));
 
     const faders = document.querySelectorAll('.fade-in');
     const io = new IntersectionObserver(entries => {
