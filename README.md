@@ -2,7 +2,7 @@
 
 Sitio multi-página orientado a CRO/SEO para captación de leads hacia **Agendar Demo Estratégica**, WhatsApp y email.
 
-## Instalación
+## Instalación local
 
 ```bash
 npm install
@@ -13,7 +13,8 @@ npm run dev
 
 - `npm run dev`: entorno local
 - `npm run build`: build de producción
-- `npm run start`: servir build
+- `npm run export`: genera versión estática para hosting tradicional (carpeta `out/`)
+- `npm run start`: servir build (modo servidor Node)
 - `npm run lint`: linting con Next.js
 
 ## Estructura
@@ -40,7 +41,61 @@ npm run dev
 - JSON-LD (`Organization`, `Service`, `FAQPage`)
 - `sitemap.xml` y `robots.txt` vía App Router
 
-## Deploy en Vercel
+---
+
+## Despliegue en Hostinger (public_html) ✅
+
+Este proyecto quedó configurado para **exportación estática** (`output: 'export'`), ideal para subir archivos a `public_html` en Hostinger.
+
+### 1) Generar archivos finales
+
+En su computadora (donde tenga Node.js):
+
+```bash
+npm install
+npm run export
+```
+
+Al terminar, se crea una carpeta llamada `out/`.
+
+### 2) Subir a `public_html`
+
+1. Abra Hostinger → Administrador de archivos.
+2. Entre a la carpeta `public_html`.
+3. **Elimine archivos anteriores** (si existieran), excepto lo que usted desee conservar.
+4. Suba **todo el contenido interno** de `out/` (no solo la carpeta, sino sus archivos y subcarpetas) dentro de `public_html`.
+
+Debe quedar algo así:
+
+- `public_html/index.html`
+- `public_html/servicios/index.html`
+- `public_html/precios/index.html`
+- `public_html/contacto/index.html`
+- etc.
+
+### 3) Validar
+
+- Abra su dominio principal (debe cargar Home).
+- Pruebe rutas internas:
+  - `/servicios/`
+  - `/precios/`
+  - `/consultoria/`
+  - `/herramientas-ia/`
+  - `/nosotros/`
+  - `/contacto/`
+  - `/prueba-gratis/`
+
+> Nota: el proyecto usa `trailingSlash: true` para que cada página se exporte como carpeta con `index.html`, lo cual es compatible con hosting compartido tipo Hostinger.
+
+### 4) Si el sitio no abre
+
+- Revise que `index.html` esté directamente dentro de `public_html`.
+- Revise que no se haya subido `out` como subcarpeta (`public_html/out/index.html` sería incorrecto).
+- Limpie caché del navegador o abra en incógnito.
+
+---
+
+## Deploy alternativo en Vercel
 
 1. Suba el repositorio a GitHub.
 2. Importe el proyecto en Vercel.
