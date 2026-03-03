@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shock Alpha | Public Hostinger</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/config.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Shock Alpha · Market Radar</h1>
+      <p>Vista pública lista para <strong>public_html</strong> en Hostinger.</p>
+      <p class="disclaimer">⚠ Solo educativo, no recomendación de inversión.</p>
+    </div>
+    <div class="selectors">
+      <label>Activo
+        <select id="symbolSelect">
+          <option value="BINANCE:BTCUSDT">BTC</option>
+          <option value="TVC:GOLD">ORO</option>
+          <option value="NYMEX:CL1!">WTI</option>
+          <option value="NASDAQ:NVDA">NVDA</option>
+          <option value="NYSE:XOM">XOM</option>
+        </select>
+      </label>
+      <label>Horizonte
+        <select id="horizonSelect">
+          <option value="5">5 días</option>
+          <option value="10" selected>10 días</option>
+          <option value="20">20 días</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel big">
+      <h2>Gráfico estilo TradingView (tiempo real)</h2>
+      <div id="tv_chart"></div>
+      <p class="muted">Incluye MA, Bollinger y RSI. Fibonacci se agrega desde herramientas del gráfico si deseas dibujarlo manualmente.</p>
+    </section>
+
+    <section class="grid2">
+      <article class="panel">
+        <h3>Resumen técnico automático</h3>
+        <div id="tv_technical"></div>
+      </article>
+      <article class="panel">
+        <h3>Predicción educativa</h3>
+        <p>Ingresa precio de referencia (actual) para generar escenario base:</p>
+        <div class="row">
+          <input id="currentPrice" type="number" step="0.0001" placeholder="Precio actual" />
+          <button id="projectBtn">Proyectar</button>
+        </div>
+        <pre id="projectionBox">{}
+</pre>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h3>Noticias de mercado (widget público)</h3>
+      <div id="tv_news"></div>
+    </section>
+  </main>
+
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

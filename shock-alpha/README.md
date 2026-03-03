@@ -51,3 +51,11 @@ make test
 - No se guardan credenciales en repositorio.
 - `.env.example` muestra variables opcionales.
 - Cache de mercado en SQLite `storage/cache.db` para reducir rate limits.
+
+
+## Entrega lista para Hostinger (public_html)
+Se incluye carpeta lista para subir directamente:
+- `hostinger/public_html/`
+
+Contiene versión estática visual con widgets estilo TradingView, indicadores y módulo de proyección educativa.
+Sigue `hostinger/public_html/README_UPLOAD.txt` para publicar en minutos.
