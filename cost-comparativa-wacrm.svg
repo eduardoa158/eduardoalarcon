@@ -1,0 +1,43 @@
+<svg width="1600" height="720" viewBox="0 0 1600 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081426"/>
+      <stop offset="1" stop-color="#0C1D2B"/>
+    </linearGradient>
+    <linearGradient id="left" x1="110" y1="160" x2="740" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF4D4D"/>
+      <stop offset="1" stop-color="#A4002E"/>
+    </linearGradient>
+    <linearGradient id="right" x1="860" y1="160" x2="1490" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17D685"/>
+      <stop offset="1" stop-color="#0E8F66"/>
+    </linearGradient>
+    <filter id="shadow" x="80" y="120" width="1440" height="540" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="720" rx="28" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="110" y="160" width="640" height="430" rx="28" fill="#111A26" stroke="#FF5B5B" stroke-opacity="0.45"/>
+    <rect x="850" y="160" width="640" height="430" rx="28" fill="#101C22" stroke="#36E1A1" stroke-opacity="0.45"/>
+
+    <rect x="145" y="330" width="280" height="210" rx="16" fill="url(#left)"/>
+    <rect x="445" y="250" width="280" height="290" rx="16" fill="url(#left)"/>
+
+    <rect x="885" y="500" width="280" height="40" rx="16" fill="url(#right)"/>
+    <rect x="1185" y="500" width="280" height="40" rx="16" fill="url(#right)"/>
+
+    <text x="145" y="220" fill="#F2F3F7" font-family="Orbitron, Rajdhani, Arial" font-size="40" font-weight="700">Equipo humano 24/7</text>
+    <text x="145" y="275" fill="#FFCDCD" font-family="Rajdhani, Arial" font-size="34">3 turnos + supervisión + rotación</text>
+
+    <text x="885" y="220" fill="#F2F3F7" font-family="Orbitron, Rajdhani, Arial" font-size="40" font-weight="700">WaCRM</text>
+    <text x="885" y="275" fill="#BFFFE2" font-family="Rajdhani, Arial" font-size="34">$47,77/mes + soporte 24/7</text>
+
+    <text x="185" y="510" fill="#FFF1F1" font-family="Orbitron, Rajdhani, Arial" font-size="58" font-weight="700">$300 - $650</text>
+    <text x="185" y="545" fill="#FFDCDC" font-family="Rajdhani, Arial" font-size="28">promedio mensual por persona</text>
+
+    <text x="915" y="490" fill="#E7FFF3" font-family="Orbitron, Rajdhani, Arial" font-size="58" font-weight="700">$47,77</text>
+    <text x="915" y="535" fill="#D3FFEA" font-family="Rajdhani, Arial" font-size="28">mensual</text>
+  </g>
+</svg>
