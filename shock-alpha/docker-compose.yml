@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  shockalpha-web:
+    build: .
+    container_name: shockalpha-web
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./storage:/app/storage
+      - ./outputs:/app/outputs
+      - ./reports:/app/reports

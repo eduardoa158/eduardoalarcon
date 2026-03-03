@@ -1,0 +1,15 @@
+assets:
+  BTC: BTC-USD
+  GOLD: GC=F
+  WTI: CL=F
+basket:
+  - XOM
+  - CVX
+  - SLB
+  - LMT
+  - NOC
+  - RTX
+  - DAL
+  - UAL
+  - NVDA
+  - JPM
