@@ -1,61 +1,68 @@
-# Shock Alpha Web App (Educativo)
+# Shock Alpha (Node.js App para Hostinger)
 
-Aplicación web educativa para análisis de mercados y shocks geopolíticos con gráficos tipo plataforma de trading y predicciones futuras.
+Aplicación web educativa para analizar shocks externos y su impacto en BTC, Oro, WTI y acciones por ticker.
 
-> **Disclaimer:** este software es solo educativo y NO constituye asesoría financiera ni recomendación de inversión.
+> **No es recomendación financiera. Solo educativo.**
 
-## Qué verás en la web
-- Gráfico principal tipo TradingView (candles OHLC) con:
-  - Media móvil 20 y 50.
-  - Bandas de Bollinger.
-  - Niveles de Fibonacci (retracements y extensiones).
-  - Proyección futura sobre el precio esperado.
-- Noticias/shocks desde GDELT (si falla, se muestra estado sin noticias y el resto sigue funcionando).
-- Predicción futura (retorno esperado, probabilidad de subida y trayectoria estimada próximos días).
+## Stack
+- Node.js + Express
+- SQLite para cache/datos locales
+- `yahoo-finance2` para precios históricos
+- GDELT 2.1 para proxies de noticias/shocks
+- `technicalindicators` para MA/Bollinger/ATR
+- Frontend estático en `public/` con Chart.js (CDN)
 
-## Fuente de datos
-- Principal: Yahoo Finance (`yfinance`) actualizado periódicamente.
-- Fallback determinista si la fuente externa falla temporalmente.
+## Estructura clave
+- `server.js`
+- `public/index.html`
+- `public/styles.css`
+- `public/app.js`
+- `src/` (data/news/models/indicators/strategy/db)
+- `storage/` (cache/reportes/shocks)
 
 ## Requisitos
-- Python 3.11+
-- Docker + Docker Compose (opcional)
+- Node.js 18+ (recomendado 20 en Hostinger)
 
-## Ejecutar en local (Docker)
+## Ejecutar local
 ```bash
 cp .env.example .env
-docker compose up --build
+npm install
+npm start
 ```
-Abrir: `http://localhost:8000`
+Abrir: `http://localhost:3000`
 
-## Ejecutar en modo dev
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .[dev]
-make dev
+## Endpoints
+- `GET /api/health`
+- `GET /api/market?symbol=BTC-USD&interval=1d&range=2y`
+- `GET /api/news?from=YYYY-MM-DD&to=YYYY-MM-DD`
+- `GET /api/shocks`
+- `POST /api/shocks`
+- `POST /api/train`
+- `POST /api/signal`
+- `POST /api/backtest`
+
+## Hostinger Node.js App (paso a paso)
+1. Sube este repo a GitHub.
+2. En Hostinger hPanel crea una **Node.js App**.
+3. Selecciona Node 20 (o 18+), rama y directorio del proyecto.
+4. Define **Startup file**: `server.js`.
+5. Ejecuta instalación: `npm install`.
+6. Variables de entorno (hPanel):
+   - `PORT` (Hostinger lo asigna o define uno)
+   - `NODE_ENV=production`
+   - `DB_PATH=./storage/shockalpha.db`
+   - `TIMEZONE=America/Guayaquil`
+7. Inicia app con `npm start`.
+
+### Nota sobre estáticos en Hostinger
+Express sirve frontend desde `public/` con:
+```js
+app.use(express.static(path.join(__dirname, 'public')))
 ```
-Abrir: `http://localhost:8000`
+Por tanto `public/index.html` y assets se publican automáticamente.
 
-## Comandos adicionales
-```bash
-make run   # pipeline batch/reportes csv/json/png
-make test
-```
+## Frecuencia automática
+El backend compara 1h vs 1d (si 1h no disponible/suficiente, usa 1d). Esto se documenta y se aplica en `/api/train`.
 
-## Deploy Hostinger
-- **VPS (recomendado):** correr Docker Compose o Uvicorn + reverse proxy.
-- **Hosting estático:** publicar frontend estático y desplegar backend FastAPI aparte.
-
-## Seguridad y datos
-- No se guardan credenciales en repositorio.
-- `.env.example` muestra variables opcionales.
-- Cache de mercado en SQLite `storage/cache.db` para reducir rate limits.
-
-
-## Entrega lista para Hostinger (public_html)
-Se incluye carpeta lista para subir directamente:
-- `hostinger/public_html/`
-
-Contiene versión estática visual con widgets estilo TradingView, indicadores y módulo de proyección educativa.
-Sigue `hostinger/public_html/README_UPLOAD.txt` para publicar en minutos.
+## Disclaimer
+Todas las señales/setups y proyecciones son educativas.
