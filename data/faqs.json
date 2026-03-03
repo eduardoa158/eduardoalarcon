@@ -1,0 +1,320 @@
+{
+  "home": [
+    {
+      "q": "¿Qué hace exactamente VisionAssist?",
+      "a": "VisionAssist responde por WhatsApp 24/7, guía conversaciones y ayuda a no perder oportunidades comerciales."
+    },
+    {
+      "q": "¿VisionAssist es un CRM?",
+      "a": "No. VisionAssist no es un CRM; es una solución conversacional conectada a WhatsApp."
+    },
+    {
+      "q": "¿Debo cambiar mi operación actual?",
+      "a": "No necesariamente. Se adapta a su flujo actual y se implementa por etapas."
+    },
+    {
+      "q": "¿Puedo mantener mi CRM?",
+      "a": "Sí. Si usted ya usa CRM, se integra y se aprovecha lo que ya funciona."
+    },
+    {
+      "q": "¿Y si no tengo CRM?",
+      "a": "Puede operar sin CRM al inicio. El CRM es opcional y se incorpora cuando convenga."
+    },
+    {
+      "q": "¿Cómo empiezo?",
+      "a": "Escriba por WhatsApp y recibirá una evaluación inicial con próximos pasos."
+    }
+  ],
+  "visionassist-7dias": [
+    {
+      "q": "¿Quiénes califican para los 7 días?",
+      "a": "Negocios con flujo real de mensajes, oferta clara y disposición para medir resultados durante la prueba."
+    },
+    {
+      "q": "¿La activación de prueba es automática?",
+      "a": "No. Se activa únicamente después de evaluación y configuración validada."
+    },
+    {
+      "q": "¿VisionAssist es un CRM?",
+      "a": "No. VisionAssist no es un CRM; es un asistente IA conectado a WhatsApp."
+    },
+    {
+      "q": "¿Qué pasa si ya tengo CRM?",
+      "a": "Se puede integrar para aprovechar su sistema actual y mantener trazabilidad."
+    },
+    {
+      "q": "¿Y si no tengo CRM?",
+      "a": "El CRM es opcional: se puede trabajar sin CRM al inicio y agregarlo luego."
+    },
+    {
+      "q": "¿Qué incluye el servicio base?",
+      "a": "Conexión de WhatsApp, respuestas IA, soporte 24/7 y ajustes de guion según desempeño."
+    },
+    {
+      "q": "¿Qué no incluye por defecto?",
+      "a": "CRM, integraciones complejas, voz IA e integración IG/FB, salvo contratación adicional."
+    },
+    {
+      "q": "¿Puedo enviar mensajes masivos?",
+      "a": "Sí, solo con estrategia responsable, opt-in real, segmentación y frecuencia moderada."
+    },
+    {
+      "q": "¿Existe riesgo de bloqueo en WhatsApp?",
+      "a": "Sí, si se usa mal. Por eso se aplican buenas prácticas de contenido y envío."
+    },
+    {
+      "q": "¿Cuál es el precio mensual?",
+      "a": "Puede mostrarse como precio vigente editable (ejemplo: USD 47.77/mes) y ajustarse por alcance."
+    }
+  ],
+  "precios": [
+    {
+      "q": "¿Por qué hacen diagnóstico antes del precio final?",
+      "a": "Porque cada negocio tiene volumen, procesos y objetivos distintos. El diagnóstico evita propuestas genéricas."
+    },
+    {
+      "q": "¿Tienen planes para PYMEs?",
+      "a": "Sí, existen paquetes de referencia para PYMEs con alcance definido y costos claros."
+    },
+    {
+      "q": "¿Y para empresas grandes?",
+      "a": "Para empresas grandes, el alcance y el precio se definen en evaluación por complejidad."
+    },
+    {
+      "q": "¿VisionAssist incluye CRM?",
+      "a": "No. VisionAssist no es un CRM. Si usted ya tiene CRM, se integra; si no, se puede incorporar opcionalmente."
+    },
+    {
+      "q": "¿Qué cubre el soporte 24/7?",
+      "a": "Principalmente incidencias críticas y continuidad operativa según plan y tipo de solicitud."
+    },
+    {
+      "q": "¿Cuánto tarda la implementación?",
+      "a": "Depende del alcance. Puede variar desde pocos días hábiles hasta fases más amplias."
+    },
+    {
+      "q": "¿Ofrecen garantía?",
+      "a": "Cuando aplica, se define una etapa de estabilización y ajustes iniciales."
+    },
+    {
+      "q": "¿Los costos de terceros están incluidos?",
+      "a": "No necesariamente. CRM, hosting, APIs y otras herramientas externas se cotizan por separado."
+    },
+    {
+      "q": "¿Cómo se divide la inversión total?",
+      "a": "En servicio DV, herramientas de terceros y consumos variables de operación."
+    },
+    {
+      "q": "¿Cómo sé qué plan necesito?",
+      "a": "Con una evaluación por WhatsApp para confirmar ajuste, tiempos y costo recomendado."
+    }
+  ],
+  "automatizaciones": [
+    {
+      "q": "¿Qué son automatizaciones aisladas?",
+      "a": "Mejoras puntuales de alto impacto sin rehacer toda su arquitectura digital."
+    },
+    {
+      "q": "¿Qué tipo de procesos se automatizan?",
+      "a": "Calificación de leads, recordatorios, seguimiento, reactivación y derivaciones."
+    },
+    {
+      "q": "¿En cuánto tiempo se ven resultados?",
+      "a": "Depende del proceso, pero suelen observarse mejoras tempranas en respuesta y orden."
+    },
+    {
+      "q": "¿Interfieren con mi operación actual?",
+      "a": "No. Se diseñan para convivir con su flujo y minimizar fricción."
+    },
+    {
+      "q": "¿Necesito herramientas adicionales?",
+      "a": "Solo las necesarias según su caso; se prioriza simplicidad y sostenibilidad."
+    },
+    {
+      "q": "¿Cómo se mide el impacto?",
+      "a": "Con KPIs de respuesta, contacto efectivo y eficiencia operativa."
+    }
+  ],
+  "finanzas": [
+    {
+      "q": "¿Sirve para recordatorios de pago?",
+      "a": "Sí, permite programar recordatorios consistentes y trazables por WhatsApp."
+    },
+    {
+      "q": "¿Puede confirmar pagos?",
+      "a": "Sí, puede registrar confirmaciones y actualizar estados en su flujo operativo."
+    },
+    {
+      "q": "¿Cómo se cuida la comunicación responsable?",
+      "a": "Se definen reglas de frecuencia, tono y escalamiento para evitar saturación."
+    },
+    {
+      "q": "¿Qué pasa con casos sensibles?",
+      "a": "Se derivan al equipo humano bajo criterios predefinidos."
+    },
+    {
+      "q": "¿Se integra con sistemas existentes?",
+      "a": "Sí, cuando es necesario se conectan herramientas actuales."
+    },
+    {
+      "q": "¿VisionAssist es un CRM financiero?",
+      "a": "No. VisionAssist no es un CRM; es una capa conversacional para WhatsApp."
+    }
+  ],
+  "servicios": [
+    {
+      "q": "¿Qué servicios ofrecen además de VisionAssist?",
+      "a": "Diseño conversacional, automatización, integración y optimización continua."
+    },
+    {
+      "q": "¿Trabajan por proyecto o mensualidad?",
+      "a": "Ambos formatos según objetivos y complejidad."
+    },
+    {
+      "q": "¿Pueden mejorar procesos existentes?",
+      "a": "Sí, se optimiza lo que ya tiene antes de proponer cambios mayores."
+    },
+    {
+      "q": "¿Qué industrias atienden?",
+      "a": "Educación, salud, finanzas, inmobiliario, comercio y servicios B2B, entre otras."
+    },
+    {
+      "q": "¿Cómo es el acompañamiento?",
+      "a": "Con diagnóstico inicial, plan por fases y seguimiento con indicadores."
+    },
+    {
+      "q": "¿El CRM es obligatorio?",
+      "a": "No, es opcional y se define por conveniencia real del negocio."
+    }
+  ],
+  "nosotros": [
+    {
+      "q": "¿Qué diferencia a Digital Vision Latam?",
+      "a": "Combinamos estrategia comercial, experiencia de cliente y automatización útil."
+    },
+    {
+      "q": "¿Su enfoque es técnico o de negocio?",
+      "a": "Primero negocio y resultados; luego tecnología alineada a objetivos."
+    },
+    {
+      "q": "¿Cómo manejan implementaciones?",
+      "a": "Por etapas para reducir riesgo y acelerar aprendizajes."
+    },
+    {
+      "q": "¿Qué valores priorizan?",
+      "a": "Claridad, responsabilidad comunicacional y eficiencia operativa sostenible."
+    },
+    {
+      "q": "¿VisionAssist reemplaza un CRM?",
+      "a": "No, VisionAssist no es CRM; lo complementa cuando existe."
+    },
+    {
+      "q": "¿Puedo solicitar una evaluación inicial?",
+      "a": "Sí, puede escribir por WhatsApp y coordinar la revisión de su caso."
+    }
+  ],
+  "blog": [
+    {
+      "q": "¿Cómo usar el blog?",
+      "a": "Como guía práctica para tomar decisiones más claras sobre su operación comercial."
+    },
+    {
+      "q": "¿Publican contenido técnico complejo?",
+      "a": "No. Priorizamos lenguaje claro y aplicable para equipos no técnicos."
+    },
+    {
+      "q": "¿Puedo sugerir temas?",
+      "a": "Sí, puede solicitar temas por WhatsApp según su necesidad."
+    },
+    {
+      "q": "¿Los artículos reemplazan una consultoría?",
+      "a": "No. Son orientación inicial que se complementa con evaluación personalizada."
+    },
+    {
+      "q": "¿Incluyen casos reales?",
+      "a": "Cuando aplica, se presentan como casos referenciales sin datos sensibles."
+    },
+    {
+      "q": "¿Con qué frecuencia actualizan?",
+      "a": "Periódicamente según prioridades de negocio y preguntas frecuentes."
+    }
+  ],
+  "recursos": [
+    {
+      "q": "¿Qué encontraré en recursos?",
+      "a": "Glosario, guías y materiales para mejorar su gestión comercial y atención."
+    },
+    {
+      "q": "¿Los recursos tienen costo?",
+      "a": "Hay recursos abiertos y materiales premium según etapa del proyecto."
+    },
+    {
+      "q": "¿Puedo compartirlos con mi equipo?",
+      "a": "Sí, están pensados para alinear equipos comerciales y operativos."
+    },
+    {
+      "q": "¿Incluyen plantillas?",
+      "a": "Sí, se incluyen formatos de diagnóstico y seguimiento cuando corresponde."
+    },
+    {
+      "q": "¿Hay contenido sobre CRM?",
+      "a": "Sí, desde enfoque práctico y sin imponer herramientas."
+    },
+    {
+      "q": "¿Cómo solicito un recurso específico?",
+      "a": "Escribiendo por WhatsApp con el tema que necesita."
+    }
+  ],
+  "contacto": [
+    {
+      "q": "¿Cuál es el canal más rápido de contacto?",
+      "a": "WhatsApp es el canal principal para respuesta ágil."
+    },
+    {
+      "q": "¿Qué información debo enviar primero?",
+      "a": "Industria, volumen aproximado de mensajes y objetivo principal."
+    },
+    {
+      "q": "¿Atienden fuera de horario?",
+      "a": "Sí, puede dejar su mensaje y se gestiona continuidad de respuesta."
+    },
+    {
+      "q": "¿Puedo agendar llamada?",
+      "a": "Sí, luego del primer contacto se coordina agenda según disponibilidad."
+    },
+    {
+      "q": "¿Cuánto tarda la evaluación inicial?",
+      "a": "Generalmente se entrega una orientación inicial en corto plazo."
+    },
+    {
+      "q": "¿Trabajan con empresas pequeñas?",
+      "a": "Sí, siempre que exista objetivo claro y disposición de implementación."
+    }
+  ],
+  "precalificacion-evaluacion": [
+    {
+      "q": "¿Para qué sirve este formulario?",
+      "a": "Para entender su contexto antes de la llamada y preparar una propuesta precisa."
+    },
+    {
+      "q": "¿Qué datos solicitan?",
+      "a": "Datos de empresa, industria, volumen y objetivo comercial."
+    },
+    {
+      "q": "¿Se capturan UTMs?",
+      "a": "Sí, se registran parámetros UTM para trazabilidad de origen."
+    },
+    {
+      "q": "¿Qué sucede al enviar?",
+      "a": "Se genera un resumen para compartir por WhatsApp con el equipo de Digital Vision Latam."
+    },
+    {
+      "q": "¿La información es pública?",
+      "a": "No, se usa únicamente para evaluación del servicio."
+    },
+    {
+      "q": "¿Puedo completar luego?",
+      "a": "Sí, puede retomarlo cuando tenga los datos necesarios."
+    }
+  ]
+}

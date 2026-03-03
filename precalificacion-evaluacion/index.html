@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Precalificación / Evaluación | Digital Vision Latam</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<script>window.SITE_ROOT='../';window.PAGE_KEY='precalificacion-evaluacion';</script>
+<header><div class="container nav"><div class="brand">Digital Vision <span>Latam</span></div>
+<nav class="nav-links">
+<a href="../index.html">Inicio</a><a href="../servicios/">Servicios</a><a href="../contacto/">Contacto</a>
+</nav>
+<a class="btn js-wa" data-interest="Precalificación" data-source="precalificacion-evaluacion">Hablar por WhatsApp</a>
+</div></header>
+<main>
+<section class="hero"><div class="container"><p class="kicker">Evaluación previa</p><h1>Formulario de precalificación</h1><p>Este formulario se comparte luego de su conversación inicial por WhatsApp para preparar una propuesta precisa.</p></div></section>
+<section class="section"><div class="container card">
+<form id="precalificacion-form">
+<label>Nombre completo<input name="nombre" required></label>
+<label>Empresa<input name="empresa" required></label>
+<label>Industria<select name="industria" required><option value="">Seleccione</option><option>Educación</option><option>Salud</option><option>Finanzas</option><option>Inmobiliario</option><option>Comercio</option><option>Otro</option></select></label>
+<label>Volumen mensual de mensajes/leads<select name="volumen" required><option value="">Seleccione</option><option>0 - 300</option><option>301 - 1.000</option><option>1.001 - 5.000</option><option>5.001+</option></select></label>
+<label>Objetivo principal<textarea name="objetivo" rows="4" required></textarea></label>
+<input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="utm_term">
+<button class="btn" type="submit">Generar resumen</button>
+</form>
+<div id="resumen" class="card" style="margin-top:16px"></div>
+</div></section>
+</main>
+<div data-global-footer></div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/precalificacion.js"></script>
+</body>
+</html>

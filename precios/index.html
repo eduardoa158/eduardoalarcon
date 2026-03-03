@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Precios | Digital Vision Latam</title>
+  <meta name="description" content="Precios claros con diagnóstico primero: se evalúa su caso antes de confirmar el ajuste ideal.">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<script>window.SITE_ROOT='../';window.PAGE_KEY='precios';</script>
+<header>
+  <div class="container nav"><div class="brand">Digital Vision <span>Latam</span></div>
+    <nav class="nav-links"><a href="../index.html">Inicio</a>
+      <a href="../visionassist-7dias/">VisionAssist 7 días</a>
+      <a href="../precios/">Precios</a>
+      <a href="../automatizaciones/">Automatizaciones</a>
+      <a href="../finanzas/">Finanzas</a>
+      <a href="../servicios/">Servicios</a>
+      <a href="../nosotros/">Nosotros</a>
+      <a href="../blog/">Blog</a>
+      <a href="../recursos/">Recursos</a>
+      <a href="../contacto/">Contacto</a></nav>
+    <a class="btn js-wa" data-interest="Precios / Evaluación" data-source="precios">Hablar por WhatsApp</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container reveal">
+      <p class="kicker">Precios claros + diagnóstico primero</p>
+      <h1>Primero evaluamos su caso y luego confirmamos el ajuste ideal.</h1>
+      <p>Trabajamos con transparencia: revisamos su industria, volumen y objetivos antes de recomendar un plan. Así evita pagar de más o quedarse corto.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn js-wa" data-interest="Precios / Evaluación" data-source="precios">Quiero evaluación</a>
+        <a class="btn btn-outline" href="../automatizaciones/">Ver automatizaciones</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container reveal">
+      <p class="kicker">Planes y paquetes</p>
+      <h2>Tabla editable desde <code>/data/pricing.json</code></h2>
+      <div class="table-wrap card">
+        <table class="table" aria-label="Tabla de precios">
+          <thead>
+            <tr>
+              <th>Plan</th>
+              <th>Segmento</th>
+              <th>Precio</th>
+              <th>Incluye</th>
+              <th>Soporte 24/7</th>
+              <th>Implementación y tiempos</th>
+              <th>Garantía (si aplica)</th>
+              <th>Costos de terceros</th>
+            </tr>
+          </thead>
+          <tbody id="pricing-table-body">
+            <tr><td colspan="8">Cargando planes...</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color:#b8c1d8;margin-top:12px">Nota: para <strong>PYMEs</strong> existen paquetes de referencia. Para <strong>empresas grandes</strong>, el alcance se define en evaluación.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container reveal">
+      <p class="kicker">Separación de costos</p>
+      <h2>Su inversión se divide en 3 partes</h2>
+      <div class="grid grid-3">
+        <article class="card"><h3>1) Servicio DV</h3><p>Diseño, configuración, operación y mejora continua de su solución.</p></article>
+        <article class="card"><h3>2) Herramientas de terceros</h3><p>CRM, hosting, plataformas de automatización o APIs (si se usan).</p></article>
+        <article class="card"><h3>3) Consumos</h3><p>Costos variables asociados al volumen de uso y proveedores externos.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container reveal">
+      <p class="kicker">Alcance del servicio</p>
+      <h2>Qué incluye / qué no incluye</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>✅ Qué incluye</h3>
+          <ul style="margin:0;padding-left:18px;color:#d7dff0">
+            <li>Diagnóstico inicial y recomendación de alcance.</li>
+            <li>Configuración de VisionAssist conectado a WhatsApp.</li>
+            <li>Ajustes de guion y mejoras según desempeño.</li>
+            <li>Soporte según tipo de solicitud y plan contratado.</li>
+            <li>Acompañamiento para orden y trazabilidad operativa.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>⛔ Qué no incluye por defecto</h3>
+          <ul style="margin:0;padding-left:18px;color:#d7dff0">
+            <li>CRM incluido en el precio base.</li>
+            <li>Costos de hosting, dominios o herramientas externas.</li>
+            <li>Integraciones avanzadas no contempladas en alcance inicial.</li>
+            <li>Implementaciones fuera de prioridad acordada sin cotización adicional.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container reveal">
+      <div class="card" style="padding:36px;text-align:center">
+        <p class="kicker">Siguiente paso</p>
+        <h2 style="margin-top:0">Conozca el plan correcto para su negocio</h2>
+        <p>Escriba por WhatsApp y reciba una evaluación inicial para confirmar ajuste, tiempos y costos de forma transparente.</p>
+        <a class="btn js-wa" data-interest="Precios / Evaluación" data-source="precios" style="padding:14px 24px;font-size:1.02rem">Quiero evaluación</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-global-footer></div>
+<script src="../assets/js/main.js"></script>
+<script>
+  (function () {
+    const tbody = document.getElementById('pricing-table-body');
+    if (!tbody) return;
+
+    fetch('../data/pricing.json')
+      .then((r) => r.json())
+      .then((rows) => {
+        tbody.innerHTML = rows.map((item) => `
+          <tr>
+            <td>${item.plan || ''}</td>
+            <td>${item.segmento || ''}</td>
+            <td>${item.precio || ''}</td>
+            <td>${item.incluye || ''}</td>
+            <td>${item.soporte || ''}</td>
+            <td>${item.implementacion || ''}</td>
+            <td>${item.garantia || ''}</td>
+            <td>${item.terceros || ''}</td>
+          </tr>
+        `).join('');
+      })
+      .catch(() => {
+        tbody.innerHTML = '<tr><td colspan="8">No se pudieron cargar los planes. Escríbanos por WhatsApp para recibir evaluación.</td></tr>';
+      });
+  })();
+</script>
+</body></html>

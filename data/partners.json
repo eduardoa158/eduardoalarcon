@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Kommo",
+    "description": "CRM recomendado para equipos comerciales que desean orden y seguimiento sin complejidad excesiva."
+  },
+  {
+    "name": "Make",
+    "description": "Plataforma recomendada para conectar apps y automatizar procesos de forma visual."
+  },
+  {
+    "name": "Hostinger",
+    "description": "Hosting recomendado para publicar sitios estáticos con buen rendimiento y administración simple."
+  },
+  {
+    "name": "n8n",
+    "description": "Herramienta recomendada para flujos de automatización avanzados y personalizables."
+  }
+]

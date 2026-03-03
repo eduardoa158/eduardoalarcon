@@ -1,0 +1,32 @@
+[
+  {
+    "plan": "Base PYME",
+    "segmento": "Para PYMEs",
+    "precio": "USD 149/mes (editable)",
+    "incluye": "VisionAssist en WhatsApp, guion base, seguimiento inicial y panel simple.",
+    "soporte": "24/7 para incidencias críticas; ajustes funcionales en horario operativo.",
+    "implementacion": "3 a 7 días hábiles según complejidad.",
+    "garantia": "Si aplica, ajustes de arranque incluidos durante la primera fase.",
+    "terceros": "CRM, hosting y otros proveedores se cotizan por separado."
+  },
+  {
+    "plan": "Crecimiento PYME",
+    "segmento": "Para PYMEs en expansión",
+    "precio": "USD 349/mes (editable)",
+    "incluye": "Automatizaciones adicionales, mejores reglas de calificación e integración opcional de CRM.",
+    "soporte": "24/7 para incidencias críticas + ventana prioritaria para mejoras pactadas.",
+    "implementacion": "5 a 12 días hábiles según alcance.",
+    "garantia": "Si aplica, periodo de estabilización con ajustes iterativos.",
+    "terceros": "Costos de CRM/API/hosting/servicios externos no incluidos."
+  },
+  {
+    "plan": "Enterprise",
+    "segmento": "Empresas grandes: se define en evaluación",
+    "precio": "A medida (definido en evaluación)",
+    "incluye": "Arquitectura conversacional y operativa de mayor escala.",
+    "soporte": "Modelo de soporte según SLA acordado.",
+    "implementacion": "Plan por fases según equipos y sistemas involucrados.",
+    "garantia": "Se establece por contrato y alcance aprobado.",
+    "terceros": "Herramientas de terceros y consumos se separan de servicio DV."
+  }
+]
