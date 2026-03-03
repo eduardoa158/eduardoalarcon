@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.35);
+  color: #fff;
+}
+
+.bg-grid {
+  background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.9), transparent 90%);
+}
+
+.orb {
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 9999px;
+  filter: blur(100px);
+  opacity: 0.22;
+}
+
+.orb-one {
+  top: -6rem;
+  left: -6rem;
+  background: #1d4ed8;
+}
+
+.orb-two {
+  right: -6rem;
+  bottom: -8rem;
+  background: #0ea5e9;
+}
+
+.panel {
+  @apply rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_20px_40px_rgba(2,8,23,0.45)] backdrop-blur-sm;
+}
