@@ -82,6 +82,7 @@ header { position: sticky; top: 0; z-index: 40; backdrop-filter: blur(10px); bac
   color: transparent;
 }
 .nav-links { display: flex; flex-wrap: wrap; gap: .9rem; font-size: .93rem; }
+nav.nav-links a { display:inline-block; padding-inline:.1rem; }
 
 .hero { padding: clamp(3.5rem, 8vw, 7rem) 0 clamp(2.2rem, 5vw, 4rem); }
 
@@ -202,6 +203,9 @@ header { position: sticky; top: 0; z-index: 40; backdrop-filter: blur(10px); bac
 .mobile-cta-bar.is-visible { transform: translateY(0); }
 
 .reveal-wrap { overflow: clip; }
+.reveal { opacity: 1; transform: none; }
+html.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+html.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
 .wrap-safe { overflow-wrap: anywhere; word-break: break-word; }
 
 .table { width: 100%; border-collapse: collapse; }

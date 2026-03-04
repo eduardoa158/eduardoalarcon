@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js');
 async function loadSiteData() {
   try {
     const response = await fetch('/data/site.json');
@@ -68,6 +69,11 @@ function setupMobileStickyCTA() {
 
 function setupRevealOnScroll() {
   const elements = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    elements.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
