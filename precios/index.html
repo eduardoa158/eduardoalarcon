@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Precios | Digital Vision Latam</title>
+  <meta name="description" content="Precios claros con diagnóstico previo para definir alcance real según su operación." />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/animations.css" />
+</head>
+<body data-page="precios">
+<div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
+
+<header class="nav"><div class="container nav"><a href="/" class="brand">Digital Vision Latam</a><nav class="nav-links">
+<a href="/servicios/">Servicios</a><a href="/automatizaciones/">Automatizaciones</a><a href="/precios/">Precios</a><a href="/finanzas/">Finanzas</a><a href="/nosotros/">Nosotros</a><a href="/blog/">Blog</a><a href="/recursos/">Recursos</a><a href="/contacto/">Contacto</a></nav></div></header>
+
+<main>
+  <section class="hero section">
+    <div class="container reveal">
+      <span class="badge">Precios transparentes</span>
+      <h1>Precios claros. Diagnóstico primero.</h1>
+      <p>No recomendamos sin conocer su operación. Primero evaluamos su caso y luego definimos el alcance.</p>
+      <p><a class="btn cta-primary js-wa" data-interest="Precios / Evaluación" data-source="precios-hero" href="#">Solicitar evaluación por WhatsApp</a></p>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="container">
+      <h2>Cómo se define el valor</h2>
+      <div class="cards-grid">
+        <article class="card glass"><h3>Tamaño operativo</h3><p>No es igual acompañar un equipo pequeño que una operación con varias áreas.</p></article>
+        <article class="card glass"><h3>Volumen de mensajes/leads</h3><p>El esfuerzo cambia según cuántas conversaciones llegan cada semana.</p></article>
+        <article class="card glass"><h3>Canales e integraciones</h3><p>Mientras más sistemas se conectan, más configuración y control se requiere.</p></article>
+      </div>
+      <p class="highlight-band">Así usted paga por lo que realmente necesita.</p>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="container">
+      <h2>Paquetes guía (PYME)</h2>
+      <p>Estos paquetes son referencia. Se adaptan según su diagnóstico.</p>
+      <div id="pricing-cards" class="cards-grid"></div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="container">
+      <h2>Empresas grandes / muy grandes</h2>
+      <article class="card glass" style="border-color:rgba(255,122,31,.42)">
+        <p><strong>Para operaciones de alto volumen, se define en evaluación personalizada.</strong></p>
+        <p><a class="btn cta-primary js-wa" data-interest="Empresa grande / Evaluación" data-source="precios-empresas-grandes" href="#">Solicitar evaluación por WhatsApp</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="container">
+      <h2>Separación de costos</h2>
+      <div class="cards-grid">
+        <article class="card glass"><h3>DV (servicio)</h3><p>Diseño, implementación, ajustes y acompañamiento.</p></article>
+        <article class="card glass"><h3>Herramientas de terceros</h3><p>CRM, hosting u otras plataformas que usted elija.</p></article>
+        <article class="card glass"><h3>Consumos</h3><p>Mensajes, minutos u otros cobros variables según uso.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal final-glow">
+    <div class="container">
+      <h2>Garantía y condiciones</h2>
+      <div class="cards-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); text-align:left;">
+        <article class="card glass"><h3>Garantía de implementación</h3><p>Entregamos su configuración acordada y acompañamos ajustes iniciales.</p></article>
+        <article class="card glass"><h3>Condiciones claras</h3><p>Alcance, tiempos y responsabilidades quedan definidos antes de iniciar.</p></article>
+        <article class="card glass"><h3>Editable</h3><p>Estos textos pueden ajustarse en contenido y tono según su política comercial.</p></article>
+      </div>
+      <p><a class="btn cta-primary js-wa" data-interest="Precios / Condiciones" data-source="precios-garantia" href="#">Solicitar evaluación por WhatsApp</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <section class="section reveal"><h2>Testimonios</h2><div id="testimonials-list" class="grid-3"></div></section>
+    <section class="section reveal"><h2>Aliados recomendados</h2><div id="partners-list"></div></section>
+    <section class="section reveal"><h2>Preguntas frecuentes</h2><div id="faq-list"></div></section>
+    <p><small>© Digital Vision Latam · Implementación estática lista para Hostinger.</small></p>
+  </div>
+</footer>
+
+<a class="btn primary js-wa floating-wa" data-interest="Precios / Flotante" data-source="precios-floating" href="#">Solicitar diagnóstico por WhatsApp</a>
+<div class="mobile-cta-bar"><a class="btn primary js-wa" data-interest="Precios / Móvil" data-source="precios-mobile" href="#">Solicitar diagnóstico por WhatsApp</a></div>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/render-footer.js"></script>
+<script src="/assets/js/render-faq.js"></script>
+<script>
+async function renderPricingCards(){
+  const wrap=document.getElementById('pricing-cards');
+  if(!wrap) return;
+  const plans=await fetch('/data/pricing.json').then(r=>r.json());
+  wrap.innerHTML=plans.map((p)=>`<article class="card glass"><h3>${p.plan}</h3><p class="badge">${p.price}</p><p><strong>Incluye:</strong></p><ul>${(p.includes||[]).map(i=>`<li>${i}</li>`).join('')}</ul><p><strong>No incluye:</strong></p><ul>${(p.excludes||[]).map(i=>`<li>${i}</li>`).join('')}</ul><p><small>${p.implementationTime||''}</small></p><p><a class="btn cta-primary js-wa" data-interest="Precio / ${p.plan}" data-source="precios-paquetes" href="#">Solicitar evaluación por WhatsApp</a></p></article>`).join('');
+  if(window.bindWhatsAppButtons) window.bindWhatsAppButtons();
+}
+document.addEventListener('DOMContentLoaded',renderPricingCards);
+</script>
+</body></html>

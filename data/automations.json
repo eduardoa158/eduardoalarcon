@@ -1,0 +1,98 @@
+[
+  {
+    "id": "auto-captura-web",
+    "title": "Captura desde formulario web",
+    "icon": "🧲",
+    "category": "Captación",
+    "value": "Convierte formularios en conversaciones listas para seguimiento.",
+    "solves": "Evita que los leads queden olvidados después de llenar un formulario.",
+    "delivers": "Notificación inmediata, clasificación inicial y primer mensaje de contacto.",
+    "costVariables": "Volumen diario y cantidad de formularios/canales conectados.",
+    "requirements": "Formulario activo y acceso al canal de WhatsApp o correo de destino.",
+    "top": true
+  },
+  {
+    "id": "auto-seguimiento-cotizacion",
+    "title": "Seguimiento automático de cotizaciones",
+    "icon": "📌",
+    "category": "Seguimiento",
+    "value": "Recuerda al prospecto en el momento correcto para retomar interés.",
+    "solves": "Reduce el abandono por falta de seguimiento del equipo.",
+    "delivers": "Secuencia de recordatorios y alerta al asesor cuando hay respuesta.",
+    "costVariables": "Cantidad de cotizaciones mensuales y frecuencia de seguimiento.",
+    "requirements": "Listado de cotizaciones y reglas de tiempos por etapa.",
+    "top": true
+  },
+  {
+    "id": "auto-reactivacion-leads",
+    "title": "Reactivación de leads pausados",
+    "icon": "🔄",
+    "category": "Reactivación",
+    "value": "Recupera conversaciones frías con mensajes útiles y segmentados.",
+    "solves": "Disminuye la pérdida de oportunidades por falta de contacto.",
+    "delivers": "Campaña de reactivación con respuesta automática y derivación.",
+    "costVariables": "Base de contactos y frecuencia de campañas responsables.",
+    "requirements": "Base de leads con consentimiento y segmentación mínima.",
+    "top": true
+  },
+  {
+    "id": "auto-agenda-demos",
+    "title": "Agenda automática de demos o llamadas",
+    "icon": "📅",
+    "category": "Agenda",
+    "value": "Ahorra coordinación manual y acelera el cierre de reuniones.",
+    "solves": "Elimina la ida y vuelta de mensajes para agendar.",
+    "delivers": "Disponibilidad, confirmación y recordatorios automáticos.",
+    "costVariables": "Número de asesores y reglas de disponibilidad.",
+    "requirements": "Calendario activo y criterios de asignación.",
+    "top": true
+  },
+  {
+    "id": "auto-postventa",
+    "title": "Postventa con encuestas y referidos",
+    "icon": "🤝",
+    "category": "Postventa",
+    "value": "Mejora experiencia del cliente y activa recomendaciones.",
+    "solves": "Evita silencio después de la compra o servicio entregado.",
+    "delivers": "Encuesta breve, mensaje de seguimiento y solicitud de referido.",
+    "costVariables": "Volumen de clientes atendidos y periodicidad del contacto.",
+    "requirements": "Base de clientes y momentos clave de postventa.",
+    "top": true
+  },
+  {
+    "id": "auto-confirmacion-citas",
+    "title": "Confirmación de citas",
+    "icon": "✅",
+    "category": "Agenda",
+    "value": "Reduce ausencias con confirmaciones y recordatorios oportunos.",
+    "solves": "Evita espacios vacíos por citas no confirmadas.",
+    "delivers": "Recordatorio previo y opción de confirmar o reprogramar.",
+    "costVariables": "Cantidad de citas y ventanas de aviso.",
+    "requirements": "Registro de citas y reglas de reprogramación.",
+    "top": true
+  },
+  {
+    "id": "auto-respuestas-faq",
+    "title": "Respuestas a preguntas frecuentes",
+    "icon": "💬",
+    "category": "Atención",
+    "value": "Entrega respuestas rápidas y consistentes todo el día.",
+    "solves": "Disminuye carga operativa en preguntas repetitivas.",
+    "delivers": "Flujo de FAQ con salida a asesor humano.",
+    "costVariables": "Cantidad de preguntas y nivel de personalización.",
+    "requirements": "Listado inicial de preguntas y respuestas aprobadas.",
+    "top": false
+  },
+  {
+    "id": "auto-alertas-equipo",
+    "title": "Alertas internas para equipo",
+    "icon": "🚨",
+    "category": "Operación",
+    "value": "Avisa al equipo cuando una conversación requiere acción humana.",
+    "solves": "Evita que casos sensibles se queden sin atención.",
+    "delivers": "Notificaciones internas por prioridad o tipo de cliente.",
+    "costVariables": "Número de alertas y áreas involucradas.",
+    "requirements": "Canal interno definido (correo, chat interno, etc.).",
+    "top": false
+  }
+]
