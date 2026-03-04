@@ -1,0 +1,44 @@
+[
+  {
+    "plan": "Essentials",
+    "price": "Desde USD 189/mes",
+    "includes": [
+      "Atención inicial por WhatsApp",
+      "Guion base personalizado",
+      "Seguimiento simple de conversaciones"
+    ],
+    "excludes": [
+      "CRM incluido",
+      "Integraciones avanzadas de múltiples sistemas"
+    ],
+    "implementationTime": "Implementación estimada: 5 a 7 días"
+  },
+  {
+    "plan": "Growth",
+    "price": "Desde USD 349/mes",
+    "includes": [
+      "Flujos de respuesta y seguimiento",
+      "Ajustes de guion por etapa",
+      "Panel de revisión operativa"
+    ],
+    "excludes": [
+      "Mensajería masiva sin segmentación",
+      "CRM incluido por defecto"
+    ],
+    "implementationTime": "Implementación estimada: 7 a 12 días"
+  },
+  {
+    "plan": "Integral",
+    "price": "Desde USD 690/mes",
+    "includes": [
+      "Arquitectura completa de conversaciones",
+      "Integraciones prioritarias del negocio",
+      "Optimización continua con acompañamiento"
+    ],
+    "excludes": [
+      "Licencias de terceros",
+      "Consumos externos (mensajes/minutos)"
+    ],
+    "implementationTime": "Implementación estimada: 10 a 20 días"
+  }
+]

@@ -1,0 +1,384 @@
+{
+  "home": [
+    [
+      "¿Cómo empiezo sin complicarme?",
+      "Con un diagnóstico corto y una propuesta de implementación paso a paso."
+    ],
+    [
+      "¿Qué mejora primero?",
+      "Normalmente tiempos de respuesta y seguimiento de prospectos."
+    ],
+    [
+      "¿Necesito cambiar mi forma de vender?",
+      "No, se adapta al proceso que ya le funciona."
+    ],
+    [
+      "¿Puede responder 24/7?",
+      "Sí, VisionAssist funciona continuamente por WhatsApp."
+    ],
+    [
+      "¿El equipo necesita capacitación?",
+      "Sí, y se entrega en lenguaje simple."
+    ],
+    [
+      "¿Se puede medir?",
+      "Sí, con indicadores claros de atención y avance comercial."
+    ],
+    [
+      "¿Funciona para pymes?",
+      "Sí, está diseñado para pymes y equipos en crecimiento."
+    ],
+    [
+      "¿Incluye soporte?",
+      "Sí, con ajustes y acompañamiento según plan."
+    ]
+  ],
+  "visionassist-7dias": [
+    [
+      "¿VisionAssist es CRM?",
+      "No. VisionAssist no es CRM; atiende y califica por WhatsApp 24/7."
+    ],
+    [
+      "¿Qué pasa si ya tengo CRM?",
+      "Se puede integrar y aprovechar su sistema actual."
+    ],
+    [
+      "¿Y si no tengo CRM?",
+      "Es opcional; podemos recomendarlo cuando sea oportuno."
+    ],
+    [
+      "¿Qué incluye en 7 días?",
+      "Configuración inicial, guion, pruebas y salida en vivo."
+    ],
+    [
+      "¿Se ajusta al tono de marca?",
+      "Sí, se personaliza para su negocio."
+    ],
+    [
+      "¿Atiende fuera de horario?",
+      "Sí, con respuestas y derivaciones automáticas."
+    ],
+    [
+      "¿Puedo editar mensajes luego?",
+      "Sí, usted mantiene control sobre los textos."
+    ],
+    [
+      "¿Cómo solicito activación?",
+      "Con el diagnóstico por WhatsApp desde esta página."
+    ]
+  ],
+  "precios": [
+    [
+      "¿Hay permanencia?",
+      "Se maneja por etapas y objetivos, con opciones flexibles."
+    ],
+    [
+      "¿Incluye configuración?",
+      "Sí, el arranque está incluido en los planes."
+    ],
+    [
+      "¿Qué plan me conviene?",
+      "Depende de su volumen y metas de crecimiento."
+    ],
+    [
+      "¿Puedo escalar después?",
+      "Sí, sin perder lo que ya implementó."
+    ],
+    [
+      "¿Cómo se paga?",
+      "Mensual o según alcance del proyecto."
+    ],
+    [
+      "¿Incluye soporte?",
+      "Sí, con revisiones y mejoras continuas."
+    ],
+    [
+      "¿El CRM está incluido?",
+      "Es opcional según plan y necesidad."
+    ],
+    [
+      "¿Hay propuesta personalizada?",
+      "Sí, luego del diagnóstico inicial."
+    ]
+  ],
+  "automatizaciones": [
+    [
+      "¿Qué automatizar primero?",
+      "Respuesta inicial, seguimiento y recuperación de conversaciones."
+    ],
+    [
+      "¿Se conecta con formularios?",
+      "Sí, con formularios, anuncios y WhatsApp."
+    ],
+    [
+      "¿Sirve para postventa?",
+      "Sí, para recordatorios, encuestas y reactivación."
+    ],
+    [
+      "¿Necesito saber de tecnología?",
+      "No, se entrega listo para operar."
+    ],
+    [
+      "¿Cómo se mide impacto?",
+      "Con tiempos de respuesta y calidad de prospectos."
+    ],
+    [
+      "¿Puedo pausar un flujo?",
+      "Sí, cada automatización queda bajo su control."
+    ],
+    [
+      "¿Se adapta por industria?",
+      "Sí, según su contexto comercial."
+    ],
+    [
+      "¿Cuánto demora implementar?",
+      "Desde pocos días para un flujo inicial."
+    ],
+    [
+      "¿Puedo empezar con una sola automatización?",
+      "Sí, recomendamos iniciar con un flujo puntual y medible."
+    ],
+    [
+      "¿Qué pasa si mi proceso cambia?",
+      "Se ajusta el flujo para mantenerlo alineado a su operación real."
+    ]
+  ],
+  "finanzas": [
+    [
+      "¿Aplica a crédito y finanzas?",
+      "Sí, especialmente para precalificación y seguimiento."
+    ],
+    [
+      "¿Reduce abandono?",
+      "Sí, con respuestas y recordatorios oportunos."
+    ],
+    [
+      "¿Puede filtrar prospectos?",
+      "Sí, mediante preguntas de evaluación."
+    ],
+    [
+      "¿Se deriva a un asesor?",
+      "Sí, con reglas por horario o perfil."
+    ],
+    [
+      "¿Se integra agenda?",
+      "Sí, para agendar llamadas o citas."
+    ],
+    [
+      "¿Ayuda con documentos?",
+      "Sí, con checklist y recordatorios automáticos."
+    ],
+    [
+      "¿Cómo cuidamos el tono?",
+      "Se ajusta a su política de atención."
+    ],
+    [
+      "¿Se puede implementar por etapas?",
+      "Sí, priorizando procesos críticos."
+    ]
+  ],
+  "servicios": [
+    [
+      "¿Qué incluyen sus servicios?",
+      "Diagnóstico, implementación, optimización y soporte."
+    ],
+    [
+      "¿Trabajan por proyecto?",
+      "Sí, por proyecto o acompañamiento continuo."
+    ],
+    [
+      "¿Dan capacitación?",
+      "Sí, práctica y enfocada en operación diaria."
+    ],
+    [
+      "¿Atienden Latam?",
+      "Sí, trabajamos con empresas de la región."
+    ],
+    [
+      "¿Hacen auditoría previa?",
+      "Sí, para detectar oportunidades rápidas."
+    ],
+    [
+      "¿Entregan documentación?",
+      "Sí, con guías y mapa de flujos."
+    ],
+    [
+      "¿Puedo iniciar pequeño?",
+      "Sí, con un flujo de alto impacto."
+    ],
+    [
+      "¿Cómo se coordina el trabajo?",
+      "Con hitos y comunicación clara."
+    ]
+  ],
+  "nosotros": [
+    [
+      "¿Quiénes son?",
+      "Un equipo enfocado en crecimiento comercial con automatización."
+    ],
+    [
+      "¿Cómo trabajan?",
+      "Diagnóstico breve, implementación rápida y mejora continua."
+    ],
+    [
+      "¿Con qué empresas colaboran?",
+      "Pymes y organizaciones que quieren vender con orden."
+    ],
+    [
+      "¿Cuál es su diferencial?",
+      "Comunicación simple y foco en resultados accionables."
+    ],
+    [
+      "¿Acompañan después del lanzamiento?",
+      "Sí, con seguimiento periódico."
+    ],
+    [
+      "¿Puedo agendar una llamada?",
+      "Sí, por WhatsApp en minutos."
+    ],
+    [
+      "¿Ofrecen estrategia comercial?",
+      "Sí, junto con la parte técnica."
+    ],
+    [
+      "¿Manejan proyectos a medida?",
+      "Sí, según objetivos de su negocio."
+    ]
+  ],
+  "blog": [
+    [
+      "¿Para quién es el blog?",
+      "Para equipos que quieren mejorar ventas con pasos claros."
+    ],
+    [
+      "¿Cada cuánto publican?",
+      "De forma constante con enfoque práctico."
+    ],
+    [
+      "¿Hablan en lenguaje técnico?",
+      "No, priorizamos claridad y aplicación inmediata."
+    ],
+    [
+      "¿Puedo sugerir temas?",
+      "Sí, por WhatsApp."
+    ],
+    [
+      "¿Incluyen ejemplos reales?",
+      "Sí, en formato simple y accionable."
+    ],
+    [
+      "¿Hay contenido para principiantes?",
+      "Sí, con explicaciones directas."
+    ],
+    [
+      "¿Puedo compartir artículos?",
+      "Sí, será un gusto."
+    ],
+    [
+      "¿Dónde pido ayuda personalizada?",
+      "En el CTA de diagnóstico por WhatsApp."
+    ]
+  ],
+  "recursos": [
+    [
+      "¿Hay recursos gratis?",
+      "Sí, encontrará materiales gratuitos y descargables."
+    ],
+    [
+      "¿Qué tipo de recursos incluyen?",
+      "Plantillas, guiones y checklists comerciales."
+    ],
+    [
+      "¿Sirven para cualquier rubro?",
+      "La mayoría sí, con ajustes mínimos."
+    ],
+    [
+      "¿Cómo los solicito?",
+      "Desde esta página o por WhatsApp."
+    ],
+    [
+      "¿Publican nuevos recursos?",
+      "Sí, de forma periódica."
+    ],
+    [
+      "¿Puedo pedir uno personalizado?",
+      "Sí, según su caso de uso."
+    ],
+    [
+      "¿Incluyen instrucciones?",
+      "Sí, en formato simple para aplicar rápido."
+    ],
+    [
+      "¿Puedo usarlos con mi equipo?",
+      "Sí, están pensados para operación diaria."
+    ]
+  ],
+  "contacto": [
+    [
+      "¿En cuánto responden?",
+      "Generalmente en pocos minutos por WhatsApp."
+    ],
+    [
+      "¿Qué debo enviar primero?",
+      "Industria, objetivo y volumen aproximado."
+    ],
+    [
+      "¿Puedo solicitar propuesta?",
+      "Sí, luego de un diagnóstico breve."
+    ],
+    [
+      "¿Atienden fuera de horario?",
+      "El asistente puede operar 24/7."
+    ],
+    [
+      "¿Pueden trabajar remoto?",
+      "Sí, operamos de forma remota en Latam."
+    ],
+    [
+      "¿Tienen soporte continuo?",
+      "Sí, según alcance del servicio."
+    ],
+    [
+      "¿Qué pasa tras el primer contacto?",
+      "Le compartimos una ruta recomendada."
+    ],
+    [
+      "¿Puedo agendar llamada?",
+      "Sí, se coordina por WhatsApp."
+    ]
+  ],
+  "precalificacion-evaluacion": [
+    [
+      "¿Para qué sirve esta evaluación?",
+      "Para entender su contexto y recomendar el mejor siguiente paso."
+    ],
+    [
+      "¿Cuánto demora?",
+      "Menos de 3 minutos."
+    ],
+    [
+      "¿Debo completar todo?",
+      "Sí, así el resumen será útil."
+    ],
+    [
+      "¿Se envía por WhatsApp?",
+      "Sí, al final puede enviar el resumen en un clic."
+    ],
+    [
+      "¿Captura UTMs?",
+      "Sí, se agregan al resumen automáticamente."
+    ],
+    [
+      "¿Recibiré una recomendación?",
+      "Sí, con base en su evaluación."
+    ],
+    [
+      "¿Mis datos están seguros?",
+      "Se usan únicamente para contacto y diagnóstico."
+    ],
+    [
+      "¿Puedo actualizar datos luego?",
+      "Sí, puede ampliarlos por WhatsApp."
+    ]
+  ]
+}
