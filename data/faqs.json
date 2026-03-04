@@ -1,0 +1,44 @@
+{
+  "home": [
+    {
+      "q": "¿Qué incluye el diagnóstico por WhatsApp?",
+      "a": "Incluye una revisión inicial de su situación, prioridades y una recomendación de por dónde empezar sin compromisos complejos de entrada."
+    },
+    {
+      "q": "¿Esto funciona aunque no use CRM?",
+      "a": "Sí. Podemos implementar soluciones en WhatsApp sin CRM. Si luego usted desea CRM, se evalúa como parte opcional."
+    },
+    {
+      "q": "¿Ustedes obligan a usar herramientas específicas?",
+      "a": "No. Recomendamos herramientas por experiencia, pero si usted ya usa otras, nos adaptamos."
+    },
+    {
+      "q": "¿Para qué tipo de negocios aplica?",
+      "a": "Aplica a negocios con atención por WhatsApp y necesidad de seguimiento comercial, operativo o administrativo."
+    },
+    {
+      "q": "¿Cómo empiezo?",
+      "a": "Solo debe escribir por WhatsApp y contarnos su caso. Le guiamos con dos preguntas rápidas para enfocar el diagnóstico."
+    },
+    {
+      "q": "¿Qué incluye el soporte?",
+      "a": "Incluye acompañamiento según alcance acordado, ajustes básicos y recomendaciones para mantener una operación ordenada."
+    },
+    {
+      "q": "¿Cómo evitan prácticas de spam?",
+      "a": "Trabajamos con comunicación responsable: segmentación, tiempos adecuados y mensajes útiles para su cliente."
+    },
+    {
+      "q": "¿Qué pasa después del primer contacto?",
+      "a": "Se analiza su caso y se propone una ruta clara con lo que se implementa, lo que no y los siguientes pasos sugeridos."
+    },
+    {
+      "q": "¿Cuánto tiempo toma implementar?",
+      "a": "Depende del alcance. Hay casos rápidos y otros que requieren más validación. Siempre le indicamos tiempos aproximados sin prometer de más."
+    },
+    {
+      "q": "¿Cómo manejan la privacidad de la información?",
+      "a": "Solo se solicita la información necesaria para implementar y operar, con prácticas básicas de resguardo y acceso controlado."
+    }
+  ]
+}
