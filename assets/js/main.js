@@ -27,17 +27,23 @@
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   }
 
-  function wireWhatsAppButtons() {
-    document.querySelectorAll(".js-wa").forEach((el) => {
+  function wireWhatsAppButtons(scope) {
+    const root = scope || document;
+    root.querySelectorAll(".js-wa").forEach((el) => {
       const interest = el.dataset.interest || "General";
       const source = el.dataset.source || "home";
-      el.setAttribute("href", buildWhatsAppLink(interest, source));
-      el.setAttribute("target", "_blank");
-      el.setAttribute("rel", "noopener noreferrer");
+      el.href = buildWhatsAppLink(interest, source);
+      el.target = "_blank";
+      el.rel = "noopener noreferrer";
     });
   }
 
   function initReveal() {
+    if (!("IntersectionObserver" in window)) {
+      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -47,28 +53,57 @@
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.14 }
     );
 
-    document.querySelectorAll(".reveal").forEach((item) => observer.observe(item));
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
   }
 
-  function mobileCtaBehavior() {
-    const mobileCta = document.querySelector(".mobile-cta");
-    if (!mobileCta) return;
-    const mq = window.matchMedia("(max-width: 900px)");
+  function setupMobileCta() {
+    const bar = document.querySelector(".mobile-cta");
+    if (!bar) return;
+    const media = window.matchMedia("(max-width: 900px)");
+
     const sync = () => {
-      mobileCta.style.display = mq.matches ? "block" : "none";
+      bar.style.display = media.matches ? "block" : "none";
     };
+
     sync();
-    mq.addEventListener("change", sync);
+    if (media.addEventListener) {
+      media.addEventListener("change", sync);
+    } else {
+      media.addListener(sync);
+    }
+  }
+
+  function setupMobileMenu() {
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".main-nav");
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener("click", () => {
+      const willOpen = !menu.classList.contains("is-open");
+      menu.classList.toggle("is-open", willOpen);
+      toggle.setAttribute("aria-expanded", String(willOpen));
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
   }
 
   window.buildWhatsAppLink = buildWhatsAppLink;
+  window.wireWhatsAppButtons = wireWhatsAppButtons;
 
-  document.addEventListener("DOMContentLoaded", function () {
-    wireWhatsAppButtons();
+  document.documentElement.classList.add("js-enabled");
+
+  document.addEventListener("DOMContentLoaded", () => {
+    wireWhatsAppButtons(document);
     initReveal();
-    mobileCtaBehavior();
+    setupMobileCta();
+    setupMobileMenu();
   });
 })();
