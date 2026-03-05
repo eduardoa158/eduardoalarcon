@@ -1,18 +1,16 @@
 (function () {
   function escapeHtml(text) {
     return String(text)
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#039;");
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
   }
 
   async function loadJson(path) {
     const response = await fetch(path, { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`No se pudo cargar ${path}`);
-    }
+    if (!response.ok) throw new Error(`No se pudo cargar ${path}`);
     return response.json();
   }
 
@@ -31,6 +29,7 @@
 
     const toggle = (trigger) => {
       const panel = root.querySelector(`#${trigger.getAttribute("aria-controls")}`);
+      if (!panel) return;
       const isOpen = trigger.getAttribute("aria-expanded") === "true";
       trigger.setAttribute("aria-expanded", String(!isOpen));
       panel.classList.toggle("open", !isOpen);
@@ -118,10 +117,7 @@
     }
 
     initFaq(footer);
-
-    if (window.wireWhatsAppButtons) {
-      window.wireWhatsAppButtons(footer);
-    }
+    if (window.wireWhatsAppButtons) window.wireWhatsAppButtons(footer);
   }
 
   document.addEventListener("DOMContentLoaded", renderFooter);

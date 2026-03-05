@@ -10,20 +10,24 @@
   border-radius: inherit;
   background: linear-gradient(115deg, transparent 25%, rgba(255, 255, 255, 0.45), transparent 70%);
   transform: translateX(-120%);
-  z-index: -1;
 }
 .btn-primary:hover::after { animation: shimmer 0.85s ease; }
 
 @keyframes floatOrb {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(18px, -16px) scale(1.05); }
+  50% { transform: translate(20px, -18px) scale(1.06); }
 }
 
 @keyframes gridPulse {
   0%, 100% { opacity: 0.38; }
-  50% { opacity: 0.18; }
+  50% { opacity: 0.16; }
 }
 
 @keyframes shimmer {
   100% { transform: translateX(120%); }
+}
+
+@keyframes revealPop {
+  0% { opacity: 0.35; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
 }

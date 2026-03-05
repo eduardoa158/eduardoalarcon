@@ -39,8 +39,11 @@
   }
 
   function initReveal() {
+    const items = document.querySelectorAll(".reveal");
+    if (!items.length) return;
+
     if (!("IntersectionObserver" in window)) {
-      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+      items.forEach((el) => el.classList.add("is-visible"));
       return;
     }
 
@@ -53,27 +56,33 @@
           }
         });
       },
-      { threshold: 0.14 }
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
     );
 
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    items.forEach((el) => observer.observe(el));
+
+    setTimeout(() => {
+      items.forEach((el) => {
+        if (!el.classList.contains("is-visible")) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.95) {
+            el.classList.add("is-visible");
+          }
+        }
+      });
+    }, 350);
   }
 
   function setupMobileCta() {
     const bar = document.querySelector(".mobile-cta");
     if (!bar) return;
     const media = window.matchMedia("(max-width: 900px)");
-
     const sync = () => {
       bar.style.display = media.matches ? "block" : "none";
     };
-
     sync();
-    if (media.addEventListener) {
-      media.addEventListener("change", sync);
-    } else {
-      media.addListener(sync);
-    }
+    if (media.addEventListener) media.addEventListener("change", sync);
+    else media.addListener(sync);
   }
 
   function setupMobileMenu() {
@@ -97,8 +106,6 @@
 
   window.buildWhatsAppLink = buildWhatsAppLink;
   window.wireWhatsAppButtons = wireWhatsAppButtons;
-
-  document.documentElement.classList.add("js-enabled");
 
   document.addEventListener("DOMContentLoaded", () => {
     wireWhatsAppButtons(document);
