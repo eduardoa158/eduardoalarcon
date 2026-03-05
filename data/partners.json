@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Kommo CRM",
+    "subtitle": "CRM conversacional",
+    "note": "Recomendado, no obligatorio"
+  },
+  {
+    "title": "Make",
+    "subtitle": "Automatización de flujos",
+    "note": "Recomendado, no obligatorio"
+  },
+  {
+    "title": "Hostinger",
+    "subtitle": "Infraestructura web",
+    "note": "Recomendado, no obligatorio"
+  },
+  {
+    "title": "n8n",
+    "subtitle": "Orquestación flexible",
+    "note": "Recomendado, no obligatorio"
+  }
+]

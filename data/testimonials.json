@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Carolina M.",
+    "industry": "Clínica estética",
+    "quote": "Antes respondíamos tarde y perdíamos citas. Con el nuevo flujo, ahora atendemos con más orden y tranquilidad.",
+    "highlight": "Más claridad para el equipo comercial"
+  },
+  {
+    "name": "Luis P.",
+    "industry": "Inmobiliaria",
+    "quote": "Nos ayudó a mantener seguimiento constante sin depender de recordatorios manuales.",
+    "highlight": "Seguimiento más consistente"
+  },
+  {
+    "name": "Andrea R.",
+    "industry": "Servicios legales",
+    "quote": "La operación se volvió más predecible y con menos interrupciones durante el día.",
+    "highlight": "Menos tareas repetitivas"
+  },
+  {
+    "name": "Jorge T.",
+    "industry": "Educación",
+    "quote": "Ahora tenemos mejor visibilidad de los contactos que sí requieren atención personalizada.",
+    "highlight": "Prioridad en oportunidades reales"
+  },
+  {
+    "name": "Valeria G.",
+    "industry": "E-commerce",
+    "quote": "Nos gustó que la propuesta fue clara sobre lo que sí se podía lograr desde el inicio.",
+    "highlight": "Expectativas bien alineadas"
+  },
+  {
+    "name": "Miguel C.",
+    "industry": "Servicios financieros",
+    "quote": "Mejoramos la comunicación sin caer en mensajes invasivos para los clientes.",
+    "highlight": "Comunicación responsable"
+  }
+]
