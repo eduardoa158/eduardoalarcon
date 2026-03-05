@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Título de página | Digital Vision Latam</title>
+  <meta name="description" content="Descripción breve de la página.">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+  <link rel="stylesheet" href="/assets/css/utilities.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- START HEADER -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">Digital <span>Vision</span> Latam</a>
+      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="menu-principal">☰ <span class="sr-only">Abrir menú</span></button>
+      <nav id="menu-principal" class="nav-links" data-nav-links>
+        <a href="/nosotros/">Nosotros</a>
+        <a href="/servicios/">Servicios</a>
+        <a href="/precios/">Precios</a>
+        <a href="/automatizaciones/">Automatizaciones</a>
+        <a href="/finanzas/">Finanzas</a>
+        <a href="/landing/visionassist-7-dias/">VisionAssist 7 días</a>
+        <a href="#" class="btn btn-primary js-wa" data-interest="Diagnóstico" data-source="template-header">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <main id="contenido" class="section">
+    <div class="container glass-card">
+      <h1>Título de la página</h1>
+      <p>Contenido aquí…</p>
+    </div>
+  </main>
+
+  <!-- START FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p class="mt-0">© <span id="year"></span> Digital Vision Latam. Todos los derechos reservados.</p>
+      <p class="mt-0">Sitio optimizado para Hostinger (public_html).</p>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+  <div class="mobile-sticky-cta">
+    <a href="#" class="btn btn-primary js-wa" data-interest="Diagnóstico" data-source="mobile-sticky">Solicitar diagnóstico por WhatsApp</a>
+  </div>
+  <a href="#" class="wa-fab js-wa" aria-label="Abrir WhatsApp" data-interest="Consulta rápida" data-source="floating-fab">✆</a>
+
+  <script src="/assets/js/wa.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
