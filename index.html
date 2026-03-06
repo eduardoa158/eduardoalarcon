@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Vision Latam | Sistemas digitales para crecer</title>
+  <meta name="description" content="Digital Vision Latam construye sistemas digitales para escalar empresas en Latinoamérica con embudos, automatización y marketing estratégico." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dv-bg: #0b0b0f;
+      --dv-bg-soft: #12121a;
+      --dv-card: rgba(255,255,255,.04);
+      --dv-text: #f9f9fc;
+      --dv-muted: #b4b4c8;
+      --dv-red: #ff0033;
+      --dv-yellow: #ffc300;
+      --dv-line: rgba(255,255,255,.12);
+      --dv-radius: 18px;
+      --dv-shadow: 0 20px 50px rgba(0,0,0,.45);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--dv-bg); color: var(--dv-text); scroll-behavior: smooth; }
+    body {
+      font-family: 'Rajdhani', system-ui, -apple-system, sans-serif;
+      font-size: clamp(16px, 1.05vw, 20px);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    .dv-home::before,
+    .dv-home::after {
+      content: "";
+      position: fixed;
+      width: 38vw;
+      height: 38vw;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: .13;
+      z-index: -1;
+      animation: dv-float 13s ease-in-out infinite;
+    }
+    .dv-home::before { background: #ff0033; top: -14vw; right: -10vw; }
+    .dv-home::after { background: #ffc300; bottom: -15vw; left: -11vw; animation-delay: -5s; }
+    @keyframes dv-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(22px)} }
+
+    .dv-home__container { width: min(1180px, 92%); margin: 0 auto; }
+    .dv-home__section { padding: clamp(54px, 7vw, 96px) 0; border-bottom: 1px solid var(--dv-line); }
+    .dv-home__eyebrow { color: var(--dv-yellow); text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; margin-bottom: 10px; }
+    h1,h2,h3 { font-family: 'Orbitron', sans-serif; line-height: 1.15; margin: 0 0 14px; }
+    h1 { font-size: clamp(33px, 5vw, 58px); max-width: 16ch; }
+    h2 { font-size: clamp(24px, 3.2vw, 40px); }
+    h3 { font-size: clamp(18px, 2.2vw, 25px); }
+    p { margin: 0 0 14px; }
+
+    .dv-home__glass {
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid var(--dv-line);
+      border-radius: var(--dv-radius);
+      box-shadow: var(--dv-shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .dv-home__topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--dv-line);
+      background: rgba(11,11,15,.86);
+      backdrop-filter: blur(10px);
+    }
+    .dv-home__topbar-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .dv-home__logo { font-family: 'Orbitron', sans-serif; font-weight: 800; }
+    .dv-home__logo span { color: var(--dv-yellow); }
+
+    .dv-home__btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: .88rem 1.25rem;
+      border: 1px solid rgba(255,255,255,.2);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .dv-home__btn:hover { transform: translateY(-2px); }
+    .dv-home__btn--primary {
+      color: #fff;
+      background: linear-gradient(120deg, var(--dv-red), #ff3900 67%, var(--dv-yellow));
+      box-shadow: 0 0 28px rgba(255,0,51,.22);
+    }
+    .dv-home__btn--secondary { color: #fff; background: #161622; }
+
+    .dv-home__hero { display: grid; grid-template-columns: 1.02fr .98fr; gap: 1rem; align-items: center; }
+    .dv-home__hero-copy p { color: #ececf5; }
+    .dv-home__hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
+    .dv-home__micro { color: var(--dv-muted); margin-top: .8rem; }
+
+    .dv-home__dashboard { padding: 1rem; }
+    .dv-home__dash-grid { display: grid; gap: .7rem; }
+    .dv-home__dash-card { padding: 1rem; border: 1px solid var(--dv-line); border-radius: 14px; background: #12121c; }
+    .dv-home__dash-card strong { color: var(--dv-yellow); font-family: 'Orbitron', sans-serif; }
+
+    .dv-home__list { margin: 0; padding-left: 1.1rem; color: #ececf5; }
+    .dv-home__list li { margin-bottom: .5rem; }
+    .dv-home__closing { font-family: 'Orbitron', sans-serif; color: var(--dv-yellow); font-size: clamp(20px, 2vw, 30px); margin-top: .8rem; }
+
+    .dv-home__flow {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0,1fr));
+      gap: .6rem;
+      margin-top: 1rem;
+    }
+    .dv-home__flow-step {
+      text-align: center;
+      padding: .85rem .5rem;
+      border: 1px solid var(--dv-line);
+      border-radius: 12px;
+      background: #131320;
+      font-weight: 700;
+      font-size: .98rem;
+    }
+
+    .dv-home__grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+    .dv-home__grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+    .dv-home__card { padding: 1rem; }
+    .dv-home__small { color: var(--dv-muted); font-size: .95rem; }
+
+    .dv-home__compare { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 14px; }
+    .dv-home__compare th,
+    .dv-home__compare td { border: 1px solid var(--dv-line); padding: .8rem; text-align: left; }
+    .dv-home__compare th { background: #171727; font-family: 'Orbitron', sans-serif; }
+
+    footer { padding: 2rem 0 3rem; }
+    .dv-home__footer-links { display: flex; flex-wrap: wrap; gap: .6rem 1rem; margin-bottom: .7rem; }
+    .dv-home__footer-links a { color: #fff; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,.25); }
+
+    @media (max-width: 1020px) {
+      .dv-home__hero, .dv-home__grid-3, .dv-home__grid-2 { grid-template-columns: 1fr; }
+      .dv-home__flow { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 700px) {
+      .dv-home__topbar-inner { flex-direction: column; justify-content: center; padding: .75rem 0; }
+      .dv-home__flow { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="dv-home">
+  <header class="dv-home__topbar">
+    <div class="dv-home__container dv-home__topbar-inner">
+      <div class="dv-home__logo">Digital Vision <span>Latam</span></div>
+      <a class="dv-home__btn dv-home__btn--secondary" href="/wacrm">Ver WaCRM</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="dv-home__section">
+      <div class="dv-home__container dv-home__hero">
+        <div class="dv-home__hero-copy">
+          <p class="dv-home__eyebrow">Sistemas de crecimiento para LATAM</p>
+          <h1>Construimos sistemas digitales que convierten visitantes en clientes de forma automática.</h1>
+          <p>Ayudamos a empresas y marcas en Latinoamérica a escalar con embudos, automatización y marketing estratégico orientado a resultados medibles.</p>
+          <div class="dv-home__hero-actions">
+            <a class="dv-home__btn dv-home__btn--primary" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20estrat%C3%A9gico.%20Mi%20negocio%20es%3A%20_____%20y%20mi%20objetivo%20principal%20es%3A%20_____%20" target="_blank" rel="noopener">Agendar diagnóstico estratégico</a>
+            <a class="dv-home__btn dv-home__btn--secondary" href="#metodologia">Ver cómo trabajamos</a>
+          </div>
+          <p class="dv-home__micro">Embudos · Automatización · Métricas · Escalamiento</p>
+        </div>
+        <div class="dv-home__dashboard dv-home__glass">
+          <div class="dv-home__dash-grid">
+            <article class="dv-home__dash-card"><strong>Embudo</strong><p>Captación multicanal con enfoque en conversión.</p></article>
+            <article class="dv-home__dash-card"><strong>Automatización</strong><p>Seguimiento inteligente para no perder oportunidades.</p></article>
+            <article class="dv-home__dash-card"><strong>Métricas</strong><p>Panel claro para decisiones comerciales con datos.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dv-home__section">
+      <div class="dv-home__container">
+        <h2>Si tu negocio depende de recomendaciones o publicaciones… tienes un problema.</h2>
+        <ul class="dv-home__list">
+          <li>No sabes cuántos clientes potenciales generas al mes.</li>
+          <li>Inviertes en publicidad sin claridad de retorno.</li>
+          <li>Tu web no convierte.</li>
+          <li>No hay seguimiento estructurado.</li>
+          <li>No automatizas tu captación.</li>
+          <li>Todo depende de mensajes manuales.</li>
+        </ul>
+        <p class="dv-home__closing">Sin sistema, no hay crecimiento predecible.</p>
+      </div>
+    </section>
+
+    <section class="dv-home__section">
+      <div class="dv-home__container">
+        <h2>No hacemos marketing. Construimos sistemas de crecimiento.</h2>
+        <p>Diseñamos estructuras completas: tráfico cualificado, conversión, automatización, seguimiento y medición.</p>
+        <div class="dv-home__flow">
+          <div class="dv-home__flow-step">Tráfico</div>
+          <div class="dv-home__flow-step">Landing</div>
+          <div class="dv-home__flow-step">Lead</div>
+          <div class="dv-home__flow-step">Automatización</div>
+          <div class="dv-home__flow-step">Cierre</div>
+          <div class="dv-home__flow-step">Retención</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dv-home__section" id="servicios">
+      <div class="dv-home__container">
+        <h2>Servicios principales</h2>
+        <div class="dv-home__grid-3">
+          <article class="dv-home__glass dv-home__card">
+            <h3>Desarrollo Web Estratégico</h3>
+            <p><strong>Problema:</strong> sitios que no convierten visitas en oportunidades.</p>
+            <p><strong>Resultado:</strong> activos digitales diseñados para conversión.</p>
+            <a class="dv-home__btn dv-home__btn--secondary" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20estrat%C3%A9gico.%20Mi%20negocio%20es%3A%20_____%20y%20mi%20objetivo%20principal%20es%3A%20_____%20" target="_blank" rel="noopener">Solicitar diagnóstico</a>
+          </article>
+          <article class="dv-home__glass dv-home__card">
+            <h3>Embudos de Venta Automatizados</h3>
+            <p><strong>Problema:</strong> captación sin proceso ni continuidad comercial.</p>
+            <p><strong>Resultado:</strong> flujo estructurado desde interés hasta cierre.</p>
+            <a class="dv-home__btn dv-home__btn--secondary" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20estrat%C3%A9gico.%20Mi%20negocio%20es%3A%20_____%20y%20mi%20objetivo%20principal%20es%3A%20_____%20" target="_blank" rel="noopener">Solicitar diagnóstico</a>
+          </article>
+          <article class="dv-home__glass dv-home__card">
+            <h3>Marketing Digital Orientado a Resultados</h3>
+            <p><strong>Problema:</strong> inversión en pauta sin control real de retorno.</p>
+            <p><strong>Resultado:</strong> estrategia Meta/Google/SEO/retargeting con enfoque en negocio.</p>
+            <a class="dv-home__btn dv-home__btn--secondary" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20estrat%C3%A9gico.%20Mi%20negocio%20es%3A%20_____%20y%20mi%20objetivo%20principal%20es%3A%20_____%20" target="_blank" rel="noopener">Solicitar diagnóstico</a>
+          </article>
+          <article class="dv-home__glass dv-home__card">
+            <h3>Automatización y Sistemas</h3>
+            <p><strong>Problema:</strong> operaciones comerciales manuales y lentas.</p>
+            <p><strong>Resultado:</strong> CRM, integraciones y reportes para escalar con orden.</p>
+            <a class="dv-home__btn dv-home__btn--secondary" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20estrat%C3%A9gico.%20Mi%20negocio%20es%3A%20_____%20y%20mi%20objetivo%20principal%20es%3A%20_____%20" target="_blank" rel="noopener">Solicitar diagnóstico</a>
+          </article>
+          <article class="dv-home__glass dv-home__card">
+            <h3>Branding Estratégico</h3>
+            <p><strong>Problema:</strong> mensaje difuso y baja diferenciación en el mercado.</p>
+            <p><strong>Resultado:</strong> posicionamiento claro para atraer al cliente correcto.</p>
+            <a class="dv-home__btn dv-home__btn--secondary" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20estrat%C3%A9gico.%20Mi%20negocio%20es%3A%20_____%20y%20mi%20objetivo%20principal%20es%3A%20_____%20" target="_blank" rel="noopener">Solicitar diagnóstico</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dv-home__section" id="metodologia">
+      <div class="dv-home__container">
+        <h2>Metodología</h2>
+        <div class="dv-home__grid-2">
+          <article class="dv-home__glass dv-home__card"><h3>Diagnóstico profundo</h3><p>Analizamos situación actual, objetivos y cuellos de botella.</p></article>
+          <article class="dv-home__glass dv-home__card"><h3>Diseño estratégico</h3><p>Definimos arquitectura de captación, conversión y seguimiento.</p></article>
+          <article class="dv-home__glass dv-home__card"><h3>Implementación</h3><p>Ejecutamos activos, automatizaciones y campañas clave.</p></article>
+          <article class="dv-home__glass dv-home__card"><h3>Optimización y escalamiento</h3><p>Iteramos con datos para crecer de forma sostenible.</p></article>
+        </div>
+        <p class="dv-home__closing">No improvisamos. Diseñamos con datos.</p>
+      </div>
+    </section>
+
+    <section class="dv-home__section">
+      <div class="dv-home__container">
+        <h2>Resultados / prueba social</h2>
+        <div class="dv-home__grid-3">
+          <article class="dv-home__glass dv-home__card"><h3>Caso #1</h3><p>+Leads / mejor conversión / más eficiencia.</p></article>
+          <article class="dv-home__glass dv-home__card"><h3>Caso #2</h3><p>Embudo + automatización para acelerar seguimiento comercial.</p></article>
+          <article class="dv-home__glass dv-home__card"><h3>Caso #3</h3><p>Mejora de ROAS y control del proceso de seguimiento.</p></article>
+        </div>
+        <p class="dv-home__small">Resultados varían según industria y ejecución. Presentamos métricas en diagnóstico.</p>
+      </div>
+    </section>
+
+    <section class="dv-home__section">
+      <div class="dv-home__container">
+        <h2>Diferenciación</h2>
+        <table class="dv-home__compare dv-home__glass">
+          <thead>
+            <tr><th>Agencia tradicional</th><th>Digital Vision</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Publicaciones</td><td>Sistemas</td></tr>
+            <tr><td>Likes</td><td>Conversiones</td></tr>
+            <tr><td>Acciones aisladas</td><td>Estructura completa</td></tr>
+            <tr><td>Sin seguimiento</td><td>Automatización</td></tr>
+            <tr><td>Sin medición</td><td>Datos y optimización</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="dv-home__section">
+      <div class="dv-home__container dv-home__grid-2">
+        <article>
+          <h2>Para quién es</h2>
+          <ul class="dv-home__list">
+            <li>Pymes y marcas que quieren escalar.</li>
+            <li>Negocios que ya venden y buscan sistematizar.</li>
+            <li>Empresas que quieren previsibilidad.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Para quién NO</h2>
+          <ul class="dv-home__list">
+            <li>Quieren resultados sin inversión.</li>
+            <li>No miden ni ejecutan.</li>
+            <li>Proyectos sin visión de crecimiento.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="dv-home__section">
+      <div class="dv-home__container">
+        <h2>Tu negocio no necesita más contenido. Necesita un sistema.</h2>
+        <a class="dv-home__btn dv-home__btn--primary" href="https://wa.me/593959920299?text=Hola%20Digital%20Vision%20Latam%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20estrat%C3%A9gico.%20Mi%20negocio%20es%3A%20_____%20y%20mi%20objetivo%20principal%20es%3A%20_____%20" target="_blank" rel="noopener">Agendar diagnóstico estratégico</a>
+        <p class="dv-home__micro">En 30 minutos identificamos oportunidades y el plan de acción.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="dv-home__container">
+      <div class="dv-home__footer-links">
+        <a href="/">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="/wacrm">WaCRM</a>
+        <a href="#">Sobre Nosotros</a>
+        <a href="#">Contacto</a>
+        <a href="#">Herramientas</a>
+      </div>
+      <p>Digital Vision Latam (Paraguay • Ecuador • LATAM)</p>
+      <p>contacto@digitalvisionlatam.com (reemplazar) · +593 XXX XXX XXX (reemplazar)</p>
+    </div>
+  </footer>
+</body>
+</html>
