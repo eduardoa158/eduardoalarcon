@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shock-alpha"
+version = "0.1.0"
+description = "Shock-aware quantitative system (educational, not financial advice)."
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "pyyaml>=6.0",
+  "requests>=2.31",
+  "feedparser>=6.0",
+  "yfinance>=0.2.40",
+  "matplotlib>=3.8",
+  "scikit-learn>=1.4",
+  "statsmodels>=0.14",
+  "fastapi>=0.111",
+  "uvicorn>=0.30",
+  "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "black>=24.0",
+  "ruff>=0.6",
+  "mypy>=1.8",
+]
+
+[tool.setuptools]
+packages = ["shockalpha", "app", "app.api", "app.services"]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

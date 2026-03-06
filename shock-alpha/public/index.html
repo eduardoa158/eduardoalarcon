@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shock Alpha Node App</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Shock Alpha (Node.js)</h1>
+    <p class="disclaimer">Solo educativo. No es asesoría financiera.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Configuración</h2>
+      <div class="grid">
+        <label>Activo/Ticker <input id="symbol" value="BTC-USD" /></label>
+        <label>Capital <input id="capital" type="number" value="10000" /></label>
+        <label>% Riesgo (0-1) <input id="riskPct" type="number" value="0.01" step="0.001" /></label>
+        <label>Stop Preference
+          <select id="stopPreference">
+            <option>ATR</option>
+            <option>Estructura</option>
+            <option selected>Mixto</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label><input id="leverageEnabled" type="checkbox" /> Apalancamiento</label>
+        <label>Factor <input id="leverageFactor" type="number" value="1" /></label>
+        <label><input id="allowShort" type="checkbox" /> Permitir Shorts</label>
+      </div>
+      <div class="row">
+        <button id="loadBtn">Cargar Mercado</button>
+        <button id="trainBtn">Entrenar</button>
+        <button id="signalBtn">Generar Setup</button>
+        <button id="backtestBtn">Backtest</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Precio + MA + Bollinger</h2>
+      <canvas id="priceChart" height="120"></canvas>
+    </section>
+
+    <section class="card">
+      <h2>Shocks Manuales</h2>
+      <div class="grid">
+        <label>Nombre <input id="shockName" value="Evento geopolítico" /></label>
+        <label>Inicio <input id="shockStart" value="2024-01-01" /></label>
+        <label>Fin <input id="shockEnd" value="2024-01-10" /></label>
+        <label>Intensidad (0-5) <input id="shockIntensity" type="number" value="3" min="0" max="5" /></label>
+      </div>
+      <button id="saveShockBtn">Guardar Shock</button>
+      <pre id="shockOut"></pre>
+    </section>
+
+    <section class="card grid2">
+      <div>
+        <h2>Resultado de Setup</h2>
+        <pre id="signalOut"></pre>
+      </div>
+      <div>
+        <h2>Backtest / Entrenamiento</h2>
+        <pre id="modelOut"></pre>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

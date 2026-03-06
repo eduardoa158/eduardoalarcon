@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pyc
+.env
+storage/cache.db
+storage/reports/*.json
+outputs/*
+!outputs/.gitkeep
+reports/*
+!reports/.gitkeep
+notebooks/*.ipynb

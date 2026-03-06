@@ -1,0 +1,22 @@
+sources:
+  yfinance: true
+  gdelt: true
+  rss: true
+  fred: false
+  eia: false
+rss_feeds:
+  - https://feeds.bbci.co.uk/news/world/rss.xml
+  - https://www.aljazeera.com/xml/rss/all.xml
+  - https://apnews.com/hub/ap-top-news?output=xml
+keywords:
+  escalation:
+    - missile
+    - airstrike
+    - sanctions
+    - hormuz
+    - attack
+  deescalation:
+    - ceasefire
+    - talks
+    - truce
+    - diplomacy

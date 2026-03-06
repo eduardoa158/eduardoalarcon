@@ -1,0 +1,33 @@
+timezone: America/Guayaquil
+frequency: 1d
+horizons: [1, 5, 10]
+start: 2016-01-01
+end: today
+
+shock:
+  on_percentile: 0.85
+  persist_windows: [3, 7, 14]
+
+features:
+  ma_windows: [5, 10, 20, 50]
+  bollinger_window: 20
+  atr_window: 14
+  pivot_window: 5
+
+risk:
+  risk_per_trade: 0.01
+  max_position: 0.2
+  atr_stop_k: 2.0
+  kill_switch_mdd: 0.25
+
+costs:
+  slippage_bps: 2
+  commission_bps: 1
+
+walk_forward:
+  train_days: 756
+  test_days: 63
+
+model:
+  ar_lags: 1
+  min_train: 250

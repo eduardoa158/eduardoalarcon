@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shock Alpha Live Charts</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Shock Alpha · Live Market Intelligence</h1>
+      <p class="disclaimer">⚠ Solo educativo, no recomendación de inversión.</p>
+    </div>
+    <div class="controls">
+      <input id="ticker" value="BTC-USD" />
+      <input id="start" value="2022-01-01" />
+      <input id="end" value="today" />
+      <button id="refreshChart">Actualizar</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Gráfico estilo TradingView (OHLC + Indicadores)</h2>
+      <p id="freqInfo"></p>
+      <div id="chartContainer"></div>
+      <div id="fibLegend" class="fib-grid"></div>
+    </section>
+
+    <section class="card grid2">
+      <div>
+        <h2>Predicciones Futuras</h2>
+        <button id="loadPredictions">Actualizar predicción</button>
+        <pre id="predictionOut"></pre>
+      </div>
+      <div>
+        <h2>Shocks y Noticias</h2>
+        <button id="loadNews">Cargar noticias</button>
+        <div id="newsList"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
