@@ -1,0 +1,38 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#021126"/>
+      <stop offset="1" stop-color="#072544"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 450) rotate(90) scale(360)">
+      <stop stop-color="#16F0C2" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#16F0C2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="350" y1="180" x2="850" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E3A68"/>
+      <stop offset="1" stop-color="#071C34"/>
+    </linearGradient>
+    <filter id="shadow" x="220" y="110" width="760" height="760" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000" flood-opacity="0.55"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#17FFD0" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" rx="32" fill="url(#bg)"/>
+  <circle cx="600" cy="450" r="360" fill="url(#glow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="350" y="180" width="500" height="540" rx="64" fill="url(#card)" stroke="#2AD3B0" stroke-opacity="0.45" stroke-width="2"/>
+    <rect x="386" y="216" width="428" height="468" rx="42" fill="#0A213B" stroke="#5EF2D0" stroke-opacity="0.25"/>
+
+    <circle cx="600" cy="450" r="128" fill="#1AD278"/>
+    <path d="M600 334C535.2 334 483 385.6 483 449.4C483 474.6 491.1 498.1 505 517.4L488.7 564L536.9 548.8C555.2 560.8 576.8 567.3 600 567.3C664.8 567.3 717 515.7 717 451.9C717 388.1 664.8 334 600 334ZM662.1 497.2C659.5 504.7 646.6 512.5 637.6 514.3C631.5 515.5 623.6 516.5 597.6 505.8C564.3 492.1 542.8 458.5 541.1 456.3C539.3 454.1 527.7 439 527.7 423.4C527.7 407.8 535.8 400.1 538.6 397.1C541.4 394.2 544.7 393.5 546.6 393.5C548.5 393.5 550.4 393.6 552 393.7C553.5 393.8 555.6 393.1 557.8 398.1C560.1 403.7 565.7 419.3 566.5 421C567.3 422.7 567.8 424.6 566.6 426.8C565.4 429 564.8 430.3 563 432.4C561.2 434.6 559.2 437.3 557.6 439.2C555.9 441.2 554.1 443.4 556.1 446.8C558.1 450.2 565.1 461.3 575.1 470.1C588 481.4 598.9 484.8 602.5 486.4C606.1 488 608.2 487.7 610.3 485.5C612.4 483.3 619.1 475.5 622 471.4C624.9 467.3 627.8 468 631.2 469.3C634.6 470.6 652.6 479.3 656.4 481.2C660.2 483.1 662.7 484.1 663.8 486C665 487.9 665 489.8 662.1 497.2Z" fill="white"/>
+  </g>
+
+  <g opacity="0.45" stroke="#2FDDB8" stroke-width="1.2">
+    <path d="M160 140H320"/>
+    <path d="M1000 230H1080"/>
+    <path d="M920 760H1080"/>
+    <path d="M120 720H260"/>
+  </g>
+</svg>
