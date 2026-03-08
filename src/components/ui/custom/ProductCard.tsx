@@ -47,9 +47,9 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Content - Altura fija para simetría */}
-      <div className="p-6 flex flex-col h-[280px]">
+      <div className="p-6 flex flex-col min-h-[320px]">
         {/* Title - Altura fija */}
-        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors leading-tight min-h-12 line-clamp-2">
+        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors leading-tight min-h-[3.25rem]">
           {product.name}
         </h3>
 
