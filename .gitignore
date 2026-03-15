@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+node_modules/
+.next/
+dist/
+.env
+backend/.env
+frontend/.env
+football.db
+artifacts/
+backend/artifacts/
