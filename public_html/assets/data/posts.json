@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "title": "Marketing Digital con IA en 2025: Automatiza, Personaliza y Conquista tu Mercado",
+      "excerpt": "El marketing digital ha evolucionado. Las estrategias que funcionaban hace apenas unos años hoy son insuficientes. En 2025, el éxito no depende de quién grita más fuerte, sino de quién se comunica de manera más inteligente. La clave de esta inteligencia es la automatización con IA, una fuerza que está redefiniendo la conexión entre marcas y clientes.",
+      "link": "/blog_post_1.html",
+      "image": "/assets/img/ai_marketing_revolution.png",
+      "imageAlt": "Cerebro de IA revolucionando el marketing digital"
+    },
+    {
+      "title": "Análisis de Datos Inteligente en 2025: Cómo la IA Transforma Información en Rentabilidad",
+      "excerpt": "En el competitivo entorno empresarial de 2025, los datos no son solo información; son el activo más valioso de su negocio. Sin embargo, la mayoría de las PyMEs se ahogan en un océano de datos sin saber cómo extraer su verdadero valor. La respuesta no está en trabajar más duro, sino en trabajar de manera más inteligente. Bienvenidos a la era del análisis de datos inteligente, impulsado por la Inteligencia Artificial.",
+      "link": "/blog_post_2.html",
+      "image": "/assets/img/ai_data_analysis_2025.png",
+      "imageAlt": "Gráficos y datos siendo analizados por IA"
+    }
+  ]
+}
